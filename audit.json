@@ -1,0 +1,131 @@
+{
+  "source": "用户上传《模拟电子技术基础》14890308",
+  "page_numbering": "印刷页码；PDF从0计索引=页码+12",
+  "chapters": [
+    {
+      "chapter": 1,
+      "first_question": "1.1",
+      "last_question": "1.15",
+      "pages": [
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "chapter": 2,
+      "first_question": "2.1",
+      "last_question": "2.12",
+      "pages": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ]
+    },
+    {
+      "chapter": 3,
+      "first_question": "3.1",
+      "last_question": "3.13",
+      "pages": [
+        80,
+        81,
+        82,
+        83
+      ]
+    },
+    {
+      "chapter": 4,
+      "first_question": "4.1",
+      "last_question": "4.13",
+      "pages": [
+        99,
+        100,
+        101,
+        102,
+        103
+      ]
+    },
+    {
+      "chapter": 5,
+      "first_question": "5.1",
+      "last_question": "5.19",
+      "pages": [
+        122,
+        123,
+        124,
+        125,
+        126
+      ]
+    },
+    {
+      "chapter": 6,
+      "first_question": "6.1",
+      "last_question": "6.21",
+      "pages": [
+        145,
+        146,
+        147,
+        148,
+        149,
+        150
+      ]
+    },
+    {
+      "chapter": 7,
+      "first_question": "7.1",
+      "last_question": "7.8",
+      "pages": [
+        170,
+        171,
+        172
+      ]
+    },
+    {
+      "chapter": 8,
+      "first_question": "8.1",
+      "last_question": "8.9",
+      "pages": [
+        179,
+        180,
+        181,
+        182
+      ]
+    },
+    {
+      "chapter": 9,
+      "first_question": "9.1",
+      "last_question": "9.20",
+      "pages": [
+        202,
+        203,
+        204,
+        205,
+        206,
+        207
+      ]
+    },
+    {
+      "chapter": 10,
+      "first_question": "10.1",
+      "last_question": "10.16",
+      "pages": [
+        222,
+        223,
+        224
+      ]
+    }
+  ],
+  "reference_answers": [
+    225,
+    226,
+    227,
+    228,
+    229,
+    230
+  ],
+  "limits": "原题与书后参考答案保留原页；串讲不是全题逐步解答。"
+}
