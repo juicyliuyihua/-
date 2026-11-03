@@ -7,12 +7,13 @@
 
 <style>
 :root{color-scheme:light;--ink:#192824;--accent:#285e4d;--paper:#fafaf6}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.85 system-ui,-apple-system,"Microsoft YaHei",sans-serif}header,main,nav,#toolbar,footer{max-width:1000px;margin:auto;padding:24px}header{padding-top:65px}.eyebrow{font:12px/1.5 monospace;letter-spacing:2px;color:var(--accent)}h1{font-size:44px;line-height:1.3;letter-spacing:-1px;margin:20px 0}h1 span{font-size:28px;font-weight:400;color:#53615b}.notice{font-size:14px;color:#52615b;max-width:760px}#toolbar{display:flex;flex-wrap:wrap;gap:10px;padding-top:0}button{font:inherit;font-size:14px;border:1px solid #c5cec7;background:transparent;color:var(--ink);border-radius:5px;padding:9px 15px;cursor:pointer}button:hover{background:#e8eee8}nav{display:grid;grid-template-columns:1fr 1fr;gap:0 30px;padding-bottom:40px}nav a{color:var(--ink);text-decoration:none;border-bottom:1px solid #dbe0d8;padding:12px 0;font-size:15px}nav span{font:13px monospace;color:#6a7c70;margin-right:16px}main{padding-top:0}.chapter{border-top:1px solid #b9c6bc;scroll-margin-top:15px}.chapter>summary{cursor:pointer;padding:22px 0;display:flex;align-items:center;gap:15px}.chapter>summary:before{content:'+';font-size:24px;color:var(--accent)}.chapter[open]>summary:before{content:'−'}.chapter h2{display:inline;font-size:23px;font-weight:600;margin:0}.chapter-body{padding:0 0 40px 30px}h3{font-size:20px;margin:32px 0 14px}h4{font-size:17px;margin:25px 0 10px}ul,ol{padding-left:24px}li{margin:8px 0}.formula{background:#edf1ea;padding:16px 20px;margin:18px 0;border-radius:5px;overflow-wrap:anywhere}.warn-tip{border-left:3px solid #8b9b74;padding:12px 18px;margin:18px 0;background:#f1f1e5}.q-item{border-top:1px solid #dde2da;padding:14px 0}.answer{margin:10px 0}.answer summary{color:var(--accent);cursor:pointer;font-size:15px}.answer>div{padding:12px 16px;background:#edf1ea;margin-top:10px}figure{margin:20px 0;background:#fff;padding:16px;border:1px solid #e1e4dc;border-radius:6px;overflow-x:auto}svg{width:100%;min-width:420px;height:auto;display:block;stroke:#24352c;stroke-width:2;fill:none}svg text{stroke:none;fill:#24352c;font:16px system-ui,sans-serif}svg .node{fill:#24352c;stroke:none}.zone{fill:#eef1e9}.depletion{fill:#bacbbd}figcaption{font-size:13px;color:#637168;text-align:center}footer{font-size:13px;color:#637168;border-top:1px solid #dbe0d8}sub{font-size:.75em}a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #8ba99c;outline-offset:4px}@media(max-width:600px){header,main,nav,#toolbar,footer{padding-left:18px;padding-right:18px}header{padding-top:32px}h1{font-size:34px}h1 span{font-size:22px}nav{grid-template-columns:1fr}.chapter h2{font-size:20px}.chapter-body{padding-left:0}body{font-size:16px}}@media print{header{padding-top:0}nav,#toolbar{display:none}body{font-size:11pt;background:white}.chapter{break-inside:auto}.chapter>summary:before{display:none}.formula,figure{break-inside:avoid}svg{min-width:0}main,header{padding:0}.chapter-body{padding-left:0}h1{font-size:25pt}}
-</style></head>
+
+table{width:100%;border-collapse:collapse;font-size:15px;margin:18px 0;display:block;overflow-x:auto}th,td{text-align:left;padding:12px;border-bottom:1px solid #d5dfd7;vertical-align:top}th{background:#e9eee7}td:first-child{min-width:95px}.syllabus{background:#f0f3ec;padding:16px 20px;border-radius:6px;margin:5px 0 24px}.syllabus summary{cursor:pointer;font-weight:600}.reader{border:1px solid #cbd6ca;border-radius:8px;background:#fff;margin:20px 0;overflow:hidden}.reader-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:15px;background:#edf1ea}.reader-controls label{font-size:14px}.reader select{font:inherit;padding:8px;border:1px solid #acbaad;border-radius:4px;background:#fff;max-width:100%}.reader img{display:block;width:100%;height:auto}.reader a{color:#285e4d}.reader .full-page{font-size:14px}.page-status{font-size:13px;color:#60715f;padding:0 18px}.exercise-section{margin-top:48px;padding-top:10px;border-top:2px solid #6d8976}.question-index,.quick-start{display:flex;flex-wrap:wrap;gap:10px}.quick-start{margin-top:24px}.quick-start a{background:#285e4d;color:white;padding:9px 14px;text-decoration:none;border-radius:4px;font-size:14px}.question-index button{min-width:55px}button:disabled{opacity:.4;cursor:default}#book-answers{scroll-margin-top:20px;border-top:1px solid #b9c6bc;margin-top:30px}a{color:#285e4d}.exercise-section{scroll-margin-top:15px}.print-note{display:none}@media print{.reader,.question-index,.quick-start,.exercise-section>p:not(.print-note),#book-answers{display:none}.exercise-section:after{content:'原题与题图请在网页中查看高清教材页。'}.syllabus{display:block}}</style></head>
 <body>
-<header><p class="eyebrow">ELECTRONICS / STUDY NOTES</p><h1>模拟电子技术<br><span>把电路，一章一章读懂。</span></h1><p>十章知识串讲 · 电路示意 · 练习思路</p><p class="notice">基于上传讲义整理。练习是题型摘要，未逐题核对教材原题；缺少参数的条目用于复习思路，不能直接作为完整作业题。</p></header><div id="toolbar"><button id="open-all">展开全部章节</button><button id="close-all">收起全部章节</button><button id="print">打印 / 存为 PDF</button></div><nav aria-label="章节目录" id="toc"><a href="#chapter-1"><span>01</span>第1章 半导体二极管及其基本应用电路</a><a href="#chapter-2"><span>02</span>第2章 双极结型晶体管及其放大电路</a><a href="#chapter-3"><span>03</span>第3章 场效应晶体管及其放大电路</a><a href="#chapter-4"><span>04</span>第4章 放大电路的频率响应</a><a href="#chapter-5"><span>05</span>第5章 差分式放大电路</a><a href="#chapter-6"><span>06</span>第6章 集成运算放大器</a><a href="#chapter-7"><span>07</span>第7章 反馈放大电路</a><a href="#chapter-8"><span>08</span>第8章 功率放大电路</a><a href="#chapter-9"><span>09</span>第9章 信号处理与信号产生电路</a><a href="#chapter-10"><span>10</span>第10章 直流稳压电源</a></nav><main>
+<header><p class="eyebrow">ELECTRONICS / STUDY NOTES</p><h1>模拟电子技术<br><span>把电路，一章一章读懂。</span></h1><p>教材对照修订版 · 十章知识串讲</p><p class="notice">依据《模拟电子技术基础》目录补充十章知识点、公式条件和解题方法。本仓库版本为知识讲义，教材原题扫描页与书后答案原页尚未发布。</p><div class="quick-start"><a href="#chapter-2">从零学习第二章 →</a></div></header><div id="toolbar"><button id="open-all">展开全部章节</button><button id="close-all">收起全部章节</button><button id="print">打印 / 存为 PDF</button></div><nav aria-label="章节目录" id="toc"><a href="#chapter-1"><span>01</span>第1章 半导体二极管及其基本应用电路</a><a href="#chapter-2"><span>02</span>第2章 双极结型晶体管及其放大电路</a><a href="#chapter-3"><span>03</span>第3章 场效应晶体管及其放大电路</a><a href="#chapter-4"><span>04</span>第4章 放大电路的频率响应</a><a href="#chapter-5"><span>05</span>第5章 差分式放大电路</a><a href="#chapter-6"><span>06</span>第6章 集成运算放大器</a><a href="#chapter-7"><span>07</span>第7章 反馈放大电路</a><a href="#chapter-8"><span>08</span>第8章 功率放大电路</a><a href="#chapter-9"><span>09</span>第9章 信号处理与信号产生电路</a><a href="#chapter-10"><span>10</span>第10章 直流稳压电源</a></nav><main>
 
 <!-- ========== 第1章 ========== -->
-<details class="chapter" id="chapter-1" open><summary><h2>第1章 半导体二极管及其基本应用电路</h2></summary><div class="chapter-body">
+<details class="chapter" id="chapter-1" open><summary><h2>第1章 半导体二极管及其基本应用电路</h2></summary><div class="chapter-body"><details class="syllabus"><summary>按教材目录检查本章知识点</summary><table><tr><th>节 / 起始页</th><th>内容</th><th>学完应会</th></tr><tr><td>1.1<br>p.1</td><td>本征、杂质半导体</td><td>分清电子/空穴、多子/少子，解释电中性</td></tr><tr><td>1.2<br>p.3</td><td>PN结</td><td>扩散与漂移、耗尽层、正反向偏置</td></tr><tr><td>1.3<br>p.4</td><td>二极管</td><td>结构、伏安特性、主要参数</td></tr><tr><td>1.4<br>p.7</td><td>基本应用电路</td><td>选模型→假设状态→列方程→检验</td></tr><tr><td>1.5<br>p.12</td><td>特殊二极管</td><td>稳压管、发光管等器件的工作方式</td></tr></table></details>
 <h3>1.1 半导体的基础知识</h3>
 <h4>1.1.1 本征半导体</h4>
 <ul>
@@ -57,9 +58,9 @@
 <ol>
 <li><strong>理想模型</strong>：正向压降0V，反向电流0；适合电源电压远大于管压降。</li>
 <li><strong>恒压降模型</strong>：硅管导通固定0.7V，反向截止；按题目规定采用此近似。</li>
-<li><strong>折线模型</strong>：死区U<sub>th</sub>=0.5V + 微变电阻r<sub>d</sub>。</li>
+<li><strong>折线模型</strong>：导通段用门槛电压与斜率电阻串联表示；斜率电阻与Q点小信号电阻不是同一概念。</li>
 <li><strong>小信号微变模型</strong>：仅Q点微小交流信号。
-<div class="formula">r<sub>d</sub> = U<sub>T</sub> / I<sub>D</sub> ≈ 26mV / I<sub>D</sub>(mA) （常温T=300K）</div>
+<div class="formula">r<sub>d</sub> = U<sub>T</sub> / I<sub>D</sub> ≈ 26mV / I<sub>D</sub>（I<sub>D</sub>用A，结果为Ω） （常温T=300K）</div>
 </li>
 </ol>
 <div class="warn-tip">r<sub>d</sub>和静态直流I<sub>D</sub>强相关，直流电流越大微变电阻越小。</div>
@@ -69,7 +70,7 @@
 <li>断开二极管，分别求阳极、阴极电位，得到开路电压。</li>
 <li>理想模型中V<sub>阳极</sub> &gt; V<sub>阴极</sub>可判断正向导通；恒压降模型还需检查规定压降，替换对应等效模型。</li>
 <li>V<sub>阳极</sub> < V<sub>阴极</sub>：二极管截止，支路断开，I=0。</li>
-<li>多二极管电路：正向开路电压最大的优先导通，导通钳位电位，再判断其余管子状态。</li>
+<li>多二极管电路：假设状态、求解电路，再逐管核验电压与电流方向。</li>
 </ol>
 
 <h4>1.4.3 二极管典型应用</h4>
@@ -84,85 +85,18 @@
 <li>LED发光二极管：正向导通发光；光电二极管：反向偏置，光照越强反向电流越大；变容二极管：反向电压改变结电容；肖特基二极管：开关速度高，正向压降低。</li>
 </ul>
 
-<h3>第1章 复习题型与解题思路（非教材原题编号）</h3>
-<div class="q-item">
-<p>1.1 判断正误：<br>(1) PN结内的漂移电流是少数载流子在内电场作用下形成的( )。<br>(2) 由于PN结交界面两边存在电位差，所以当把PN结两端短路时就有电流流过( )。</p>
-<details class="answer"><summary>查看解题思路</summary><div>答案：(1)√；(2)×<br>解析：金属引线接触电势抵消PN结内建电势，短路无净持续电流。</div></details>
-</div>
 
-<div class="q-item">
-<p>1.2 判断正误：<br>(1)稳压管是一种特殊的二极管，它通常工作在反向击穿状态( )。<br>(2)它不允许工作在正向导通状态( )。</p>
-<details class="answer"><summary>查看解题思路</summary><div>答案：(1)√；(2)×<br>解析：稳压管正向特性和普通二极管一样，只是不用来稳压。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.3 选择填空：在杂质半导体中，多数载流子的浓度主要取决于___；少数载流子的浓度与___关系十分密切。(a)温度 (b)掺杂工艺 (c)杂质浓度)</p>
-<details class="answer"><summary>查看解题思路</summary><div>答案：c；a<br>解析：多子看掺杂多少；少子由本征激发，受温度控制。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.4 选择填空：随着温度的升高，在杂质半导体中，少数载流子的浓度___，而多数载流子的浓度___。(a)明显增大 (b)明显减小 (c)变化较小)</p>
-<details class="answer"><summary>查看解题思路</summary><div>答案：a；c</div></details>
-</div>
-
-<div class="q-item">
-<p>1.5 选择填空：在保持二极管反向电压不变的条件下，二极管的反向电流随温度升高而___。(a)增大 (b)减小 (c)不变)</p>
-<details class="answer"><summary>查看解题思路</summary><div>答案：a</div></details>
-</div>
-
-<div class="q-item">
-<p>1.6 判断图题1.6六个电路二极管工作状态，求U<sub>O</sub>，硅管正向压降0.7V。</p>
-<details class="answer"><summary>查看解题思路</summary><div>断开二极管，分别求阳极阴极电位；电位差>0.7V导通代入0.7V；否则截止输出由外电路；多管注意优先导通钳位效应。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.7 D为硅二极管正向压降0.7V，判断导通，计算U<sub>O</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>断开二极管，比较两端开路电位差；电位差大于0.7V导通，替换恒压降模型列KVL求解输出。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.8 判断二极管导通/截止，求U<sub>AO</sub>，理想二极管。</p>
-<details class="answer"><summary>查看解题思路</summary><div>理想模型导通压降0；断开管子求两端电位；阳极高于阴极导通，否则截止。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.9 判断二极管导通还是截止，说明理由。</p>
-<details class="answer"><summary>查看解题思路</summary><div>将二极管两端节点分别计算静态电位，比较阳极-阴极电位差，分析偏置。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.10 输入u<sub>i</sub>是斜升波形，二极管理想，画出0~5ms输出u<sub>o</sub>波形。</p>
-<details class="answer"><summary>查看解题思路</summary><div>比较二极管两端电位；高于阈值导通钳位；低于阈值截止跟随输入，分段画波形。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.11 D<sub>Z1</sub>、D<sub>Z2</sub>稳定电压5V、10V，正向压降0.7V，求a/b/c/d四图输出U<sub>O</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>反向串联稳压值相加；一正一反：U=U<sub>Z</sub>+0.7V；并联取电压小者；注意区分稳压管正向/反向接法。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.12 u<sub>i</sub>=5sinωt，理想二极管，画电压传输特性u<sub>o</sub>=f(u<sub>i</sub>)，再画u<sub>o</sub>波形，标幅值。</p>
-<details class="answer"><summary>查看解题思路</summary><div>找到二极管导通转折点电压；分区间写u<sub>o</sub>表达式；根据区间画传输特性与输出波形。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.13 V<sub>A</sub>、V<sub>B</sub>分别取0V、+3V组合，求V<sub>Y</sub>，理想二极管。</p>
-<details class="answer"><summary>查看解题思路</summary><div>二极管或门电路；电位低的输入端对应二极管优先导通，钳位输出电位。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.14 u<sub>i</sub>=15sinωt，两只稳压管8V，画输出u<sub>o</sub>波形。</p>
-<details class="answer"><summary>查看解题思路</summary><div>双向限幅；正半周一只稳压管反向击穿，另一只正向导通；负半周反过来；限幅电平=8+0.7=8.7V。</div></details>
-</div>
-
-<div class="q-item">
-<p>1.15 稳压管稳压电路，U<sub>I</sub>=10V，U<sub>Z</sub>=6V，I<sub>Z</sub>范围5-25mA，R<sub>L</sub>=600Ω，求限流电阻R取值范围。</p>
-<details class="answer"><summary>查看解题思路</summary><div>I<sub>L</sub>=U<sub>Z</sub>/R<sub>L</sub>；I<sub>R</sub>=(U<sub>I</sub>-U<sub>Z</sub>)/R；I<sub>Z</sub>=I<sub>R</sub>-I<sub>L</sub>；满足 5mA ≤ I<sub>Z</sub> ≤25mA，解出R最大、最小边界。</div></details>
-</div>
+<h3>补齐理解：从载流子到电路计算</h3>
+<p>先分清“为什么能导电”和“怎样算电路”。半导体物理解释器件特性；真正做电路题时，要把器件换成适用的等效模型。</p>
+<h4>1.1～1.3 不要混淆的四组概念</h4>
+<ul><li>扩散由<strong>浓度差</strong>引起；漂移由<strong>电场</strong>引起。电子运动方向与其形成的电流方向相反。</li><li>耗尽层主要是失去可移动多数载流子的区域，留下固定离子，并非完全没有电荷。</li><li>正向压降随电流和温度改变，“硅管0.7V”只是恒压降近似；题目给0.6V就用0.6V。</li><li>击穿电压是器件特性，允许反向工作电压是使用限值；稳压管也必须限流，击穿不等于可以承受任意功率。</li></ul>
+<h4>1.4 多管电路的可靠算法</h4><p>分别假设各管导通/截止。导通管替换为规定压降，截止管开路；列KCL/KVL求电压电流。最后检查：导通电流能否沿阳极→阴极流动？截止管的正向电压是否不足以导通？只要一项不满足，就修改假设。“电压最大的管先导通”只适合特定钳位结构，不能当通用规则。</p>
+<p>画限幅输出时，先算每个导通门限，再把输入波形分段。两个反向串联的稳压管限幅时，一只反向击穿、另一只正向导通，限幅值通常为 U<sub>Z</sub>+U<sub>D</sub>，不能只写U<sub>Z</sub>。</p>
+<h4>1.5 稳压范围：同时看轻载和重载</h4><div class="formula">I<sub>Z</sub>=(U<sub>I</sub>−U<sub>Z</sub>)/R−I<sub>L</sub><br>重载、最低输入：I<sub>Z</sub>≥I<sub>Zmin</sub><br>轻载、最高输入：I<sub>Z</sub>≤I<sub>Zmax</sub>，且 U<sub>Z</sub>I<sub>Z</sub>≤P<sub>Zmax</sub></div><p>电流单位统一用A时，电压除电流得到Ω；用V和mA时，结果是kΩ。不要把“mA数值”直接代入以A为单位的公式。</p>
 </div></details>
 
 <!-- ========== 第2章 ========== -->
-<details class="chapter" id="chapter-2"><summary><h2>第2章 双极结型晶体管及其放大电路</h2></summary><div class="chapter-body">
+<details class="chapter" id="chapter-2"><summary><h2>第2章 双极结型晶体管及其放大电路</h2></summary><div class="chapter-body"><details class="syllabus"><summary>按教材目录检查本章知识点</summary><table><tr><th>节 / 起始页</th><th>内容</th><th>学完应会</th></tr><tr><td>2.1<br>p.18</td><td>BJT</td><td>结构、放大原理、特性曲线、参数</td></tr><tr><td>2.2<br>p.25</td><td>共射电路</td><td>偏置、电源、负载、耦合电容分别干什么</td></tr><tr><td>2.3<br>p.27</td><td>分析方法</td><td>直/交流负载线、小信号模型、四项动态指标</td></tr><tr><td>2.4<br>p.34</td><td>静态工作点稳定</td><td>温度影响、分压偏置、射极负反馈</td></tr><tr><td>2.5<br>p.40</td><td>共集电路</td><td>射极跟随器的Q点、增益和电阻</td></tr><tr><td>2.6<br>p.43</td><td>共基电路</td><td>输入在发射极，同相、小输入电阻</td></tr><tr><td>2.7<br>p.45</td><td>多级电路</td><td>共射—共基、共集—共集、阻容耦合</td></tr></table></details>
 <h3>2.1 BJT双极结型晶体管</h3>
 <ul>
 <li>类型NPN、PNP；三个区域：发射区、基区、集电区；两个PN结：发射结、集电结；电极e发射极，b基极，c集电极。</li>
@@ -182,7 +116,7 @@
 <h4>BJT主要参数</h4>
 <ul>
 <li>直流β̄，交流β；α=β/(1+β)；I<sub>CBO</sub>集电结反向饱和电流；穿透电流 I<sub>CEO</sub>=(1+β)I<sub>CBO</sub>。</li>
-<li>极限参数：I<sub>CM</sub>最大集电极电流；P<sub>CM</sub>为最大允许耗散功率；静态管耗P<sub>C</sub>≈I<sub>C</sub>U<sub>CE</sub>；反向击穿电压关系 U<sub>(BR)CBO</sub> > U<sub>(BR)CES</sub> > U<sub>(BR)CER</sub> > U<sub>(BR)CEO</sub>。</li>
+<li>极限参数：I<sub>CM</sub>最大集电极电流；P<sub>CM</sub>为最大允许耗散功率；静态管耗P<sub>C</sub>≈I<sub>C</sub>U<sub>CE</sub>；反向击穿电压要区分测试接法；通常U<sub>(BR)CBO</sub>大于U<sub>(BR)CEO</sub>，选用时按题给额定值检查。</li>
 </ul>
 
 <h4>阻容耦合共射放大电路示意图</h4>
@@ -203,7 +137,7 @@ I<sub>BQ</sub> = (V<sub>CC</sub> − U<sub>BEQ</sub>) / R<sub>b</sub>
 
 <h4>小信号模型动态分析（中频：电容近似短路，理想直流电源交流接地）</h4>
 <div class="formula">
-r<sub>be</sub> ≈ 200Ω + (1+β) · 26mV / I<sub>EQ</sub>(mA)
+r<sub>be</sub> ≈ 200Ω + (1+β) · 26mV / I<sub>EQ</sub>（I<sub>EQ</sub>用A，结果为Ω）
 <br>适用于发射极交流接地、忽略r<sub>ce</sub>的共射电路：<br>A<sub>u</sub> = u<sub>o</sub>/u<sub>i</sub> = − β(R<sub>c</sub>//R<sub>L</sub>) / r<sub>be</sub>
 <br>R<sub>i</sub> = R<sub>b</sub> // r<sub>be</sub>
 <br>R<sub>o</sub> ≈ R<sub>c</sub>
@@ -240,60 +174,27 @@ V<sub>BQ</sub> ≈ R<sub>b2</sub>/(R<sub>b1</sub>+R<sub>b2</sub>) · V<sub>CC</s
 <li>总电压增益：A<sub>u</sub> = A<sub>u1</sub>·A<sub>u2</sub>·A<sub>u3</sub>…；总输入电阻等于第一级输入电阻；总输出电阻等于最后一级输出电阻。</li>
 </ul>
 
-<h3>第2章复习题型与解题思路（非教材原题编号）</h3>
-<div class="q-item">
-<p>2.1 根据BJT三个电极电位，判断NPN/PNP，判断工作状态：放大、饱和、截止。</p>
-<details class="answer"><summary>查看解题思路</summary><div>NPN放大条件：U<sub>BE</sub>>开启电压，V<sub>C</sub>>V<sub>B</sub>>V<sub>E</sub>；饱和V<sub>B</sub>>V<sub>C</sub>；截止U<sub>BE</sub>小于死区。PNP电位全部反过来。</div></details>
-</div>
 
-<div class="q-item">
-<p>2.2 已知BJTβ、I<sub>CBO</sub>，求I<sub>CEO</sub>，I<sub>B</sub>，I<sub>C</sub>，I<sub>E</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>I<sub>CEO</sub>=(1+β)I<sub>CBO</sub>；I<sub>C</sub>=βI<sub>B</sub>+I<sub>CEO</sub>；I<sub>E</sub>=I<sub>B</sub>+I<sub>C</sub>。</div></details>
-</div>
-
-<div class="q-item">
-<p>2.3 固定偏置共射电路，给定V<sub>CC</sub>，R<sub>b</sub>，R<sub>c</sub>，β；求静态I<sub>BQ</sub>，I<sub>CQ</sub>，U<sub>CEQ</sub>，判断管子是否工作在放大区。</p>
-<details class="answer"><summary>查看解题思路</summary><div>直流通路电容开路；先算I<sub>BQ</sub>，再I<sub>CQ</sub>；计算U<sub>CEQ</sub>；U<sub>CEQ</sub>>U<sub>BEQ</sub>则放大；若U<sub>CEQ</sub>接近0.3V进入饱和。</div></details>
-</div>
-
-<div class="q-item">
-<p>2.4 图解法，给出输出特性曲线，R<sub>c</sub>、V<sub>CC</sub>画直流负载线，读出Q点参数。</p>
-<details class="answer"><summary>查看解题思路</summary><div>直流负载线两点：(V<sub>CC</sub>,0)，(0,V<sub>CC</sub>/R<sub>c</sub>)；负载线和I<sub>B</sub>对应输出特性交点即Q点，读出I<sub>CQ</sub>、U<sub>CEQ</sub>。</div></details>
-</div>
-
-<div class="q-item">
-<p>2.5 共射放大电路，参数已知，求r<sub>be</sub>，A<sub>u</sub>，R<sub>i</sub>，R<sub>o</sub>；负载R<sub>L</sub>开路A<sub>u</sub>如何变化。</p>
-<details class="answer"><summary>查看解题思路</summary><div>先求静态I<sub>EQ</sub>；计算r<sub>be</sub>；带负载用R<sub>c</sub>//R<sub>L</sub>；R<sub>L</sub>开路后，增益分子中的并联负载变为R<sub>c</sub>，电压增益绝对值变大。</div></details>
-</div>
-
-<div class="q-item">
-<p>2.6 固定偏置共射，说明R<sub>b</sub>增大、R<sub>c</sub>增大、V<sub>CC</sub>增大分别如何影响静态Q点，会产生什么失真。</p>
-<details class="answer"><summary>查看解题思路</summary><div>R<sub>b</sub>↑ →I<sub>BQ</sub>↓，Q下移，容易截止失真；R<sub>c</sub>↑ →U<sub>CEQ</sub>下降，容易饱和失真；V<sub>CC</sub>改变时需重算I<sub>BQ</sub>、I<sub>CQ</sub>及U<sub>CEQ</sub>，不能一概判断动态范围增大。</div></details>
-</div>
-
-<div class="q-item">
-<p>2.7 分压式射极偏置电路，带C<sub>e</sub>；给定V<sub>CC</sub>，R<sub>b1</sub>、R<sub>b2</sub>，R<sub>c</sub>，R<sub>e</sub>，β，R<sub>L</sub>；求静态Q点；求A<sub>u</sub>、R<sub>i</sub>、R<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>第一步分压算V<sub>BQ</sub>；第二步I<sub>EQ</sub>=(V<sub>BQ</sub>-U<sub>BEQ</sub>)/R<sub>e</sub>；算U<sub>CEQ</sub>；再求r<sub>be</sub>；C<sub>e</sub>存在R<sub>e</sub>交流接地，代入增益输入输出电阻公式。</div></details>
-</div>
-
-<div class="q-item">
-<p>2.8 射极跟随器（共集），已知电路参数，求静态Q；求A<sub>u</sub>、R<sub>i</sub>、R<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>直流通路求I<sub>BQ</sub>、I<sub>EQ</sub>；r<sub>be</sub>；共集A<sub>u</sub>≈(1+β)R'<sub>L</sub>/(r<sub>be</sub>+(1+β)R'<sub>L</sub>)；输入电阻大，输出电阻很小。</div></details>
-</div>
-
-<div class="q-item">
-<p>2.9 共基放大电路参数给定，求静态Q点，A<sub>u</sub>，R<sub>i</sub>，R<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>静态计算和分压偏置一致；共基电压增益为正，同相；输入电阻很小R<sub>i</sub>≈r<sub>be</sub>/(1+β)；输出电阻≈R<sub>c</sub>。</div></details>
-</div>
-
-<div class="q-item">
-<p>2.10 两级阻容耦合放大电路，每级参数已知，求总A<sub>u</sub>，总输入电阻R<sub>i</sub>，总输出电阻R<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>后级输入电阻作为前级负载；A<sub>u</sub>=A<sub>u1</sub>×A<sub>u2</sub>；总输入电阻=第一级R<sub>i1</sub>；总输出电阻=第二级R<sub>o2</sub>。</div></details>
-</div>
+<h3>第二章从零串起来：一张电路，分三次看</h3>
+<p><strong>第一次看直流：</strong>没有输入信号时，管子站在哪个工作点？<strong>第二次看交流：</strong>输入变化一点，输出变化多少？<strong>第三次看极限：</strong>变化太大时，先碰到截止还是饱和？这三件事分别对应Q点、增益、最大不失真幅度。</p>
+<h4>2.1.2～2.1.3 电流放大与特性曲线</h4><p>发射结正偏使载流子从发射区注入薄基区；少部分在基区复合，绝大部分到达集电结并被收集。因此 I<sub>C</sub>远大于I<sub>B</sub>。输入特性看固定U<sub>CE</sub>时i<sub>B</sub>随u<sub>BE</sub>怎样变；输出特性看固定i<sub>B</sub>时i<sub>C</sub>随u<sub>CE</sub>怎样变。一条输出曲线对应一个基极电流。</p>
+<p>“放大”能量来自直流电源。输入信号控制电源向负载送能量；三极管本身不是能量源。交流β是Q点附近的斜率Δi<sub>C</sub>/Δi<sub>B</sub>，不必与直流比值完全相同。</p>
+<h4>2.2 电路各部分为什么存在</h4><p>偏置电阻给基极提供直流通路；R<sub>C</sub>把集电极电流变化变成电压变化；V<sub>CC</sub>提供能量；耦合电容隔开前后级直流；R<sub>L</sub>是真正接收输出的负载。NPN共射输入升高→基极电流增大→集电极电流增大→R<sub>C</sub>压降增大→集电极电位降低，所以输出反相。</p>
+<h4>2.3.1 负载线：直流和交流为什么不同</h4><p>对发射极接地、输出电容耦合的共射电路，直流时电容开路，R<sub>L</sub>不参与，负载线为 U<sub>CE</sub>=V<sub>CC</sub>−I<sub>C</sub>R<sub>C</sub>。它与偏置所对应的输出特性曲线相交，得到Q点。</p><p>中频交流时，输出电容近似短路，交流负载变为 R′=R<sub>C</sub>∥R<sub>L</sub>。交流负载线<strong>通过Q点</strong>，在“纵轴i<sub>C</sub>、横轴u<sub>CE</sub>”坐标中斜率为−1/R′，不能仍沿原来的直流线摆动。</p><div class="formula">发射极交流接地时：U<sub>om,max</sub>≈min[I<sub>CQ</sub>R′，U<sub>CEQ</sub>−U<sub>CE(sat)</sub>]<br>对应正弦有效值 U<sub>o,max</sub>=U<sub>om,max</sub>/√2</div><p>前一项是截止方向的余量，后一项是饱和方向的余量。有未旁路射极电阻时，要重新按电路求交流负载线及输出摆幅。</p>
+<h4>2.3.2 四个动态量，必须说清从哪里量</h4>
+<table><tr><th>量</th><th>定义</th><th>常见漏项</th></tr><tr><td>A<sub>u</sub></td><td>u<sub>o</sub>/u<sub>i</sub></td><td>输出负载会使增益下降</td></tr><tr><td>A<sub>us</sub></td><td>u<sub>o</sub>/u<sub>s</sub>=A<sub>u</sub>R<sub>i</sub>/(R<sub>s</sub>+R<sub>i</sub>)</td><td>信号源内阻的输入分压</td></tr><tr><td>R<sub>i</sub></td><td>输入端u<sub>i</sub>/i<sub>i</sub></td><td>偏置电阻也是并联支路</td></tr><tr><td>R<sub>o</sub></td><td>输入独立信号源置零、取下负载后，从输出端看进去</td><td>保留R<sub>s</sub>与受控源，不能直接把R<sub>L</sub>算进去</td></tr></table>
+<p>电压源置零等于短路，电流源置零等于开路。理想直流电源在交流等效中接地；理想恒流源在交流等效中开路。受控源始终保留。</p>
+<h4>2.4 射极电阻：稳定Q点，也可能减小交流增益</h4><p>温度上升通常使电流增大→R<sub>E</sub>压降增大→U<sub>BE</sub>减小→抑制电流继续增大，这是直流负反馈。电容只旁路哪一段电阻，交流时就只消去哪一段，不能把所有射极电阻一并删掉。</p>
+<div class="formula">令未旁路射极电阻为R<sub>Eu</sub>，忽略r<sub>ce</sub>：<br>r<sub>in,b</sub>=r<sub>be</sub>+(β+1)R<sub>Eu</sub><br>A<sub>u</sub>=−β(R<sub>C</sub>∥R<sub>L</sub>)/[r<sub>be</sub>+(β+1)R<sub>Eu</sub>]<br>R<sub>i</sub>=R<sub>B1</sub>∥R<sub>B2</sub>∥r<sub>in,b</sub></div>
+<h4>2.5～2.6 共集、共基不只需要记结论</h4><p>“共”指输入和输出的公共交流端。共集从基极输入、发射极输出；共基从发射极输入、集电极输出。</p><div class="formula">共集：令 R′<sub>E</sub>=R<sub>E</sub>∥R<sub>L</sub><br>A<sub>u</sub>=(β+1)R′<sub>E</sub>/[r<sub>be</sub>+(β+1)R′<sub>E</sub>]<br>R<sub>i</sub>=R<sub>B</sub>∥[r<sub>be</sub>+(β+1)R′<sub>E</sub>]<br>R<sub>o</sub>≈R<sub>E</sub>∥[(r<sub>be</sub>+R<sub>s</sub>∥R<sub>B</sub>)/(β+1)]<br>共基（基极交流接地）：r<sub>in,e</sub>≈r<sub>be</sub>/(β+1)，A<sub>u</sub>≈+β(R<sub>C</sub>∥R<sub>L</sub>)/r<sub>be</sub></div><p>这些式子均忽略晶体管输出电阻；如果输入端另有射极偏置电阻，需要把它并入共基输入电阻。PNP先标清电压、电流方向，再列回路，别硬套NPN正电源公式。</p>
+<h4>2.7.1 共射—共基：高增益与较宽带宽</h4><p>下管共射接收输入，上管共基把电流送到输出。上管发射极输入阻抗较小，使下管集电极电压变化较小，减弱下管集电结电容的密勒放大。这是共射—共基组合改善高频性能的原因；它不是简单把两级空载增益相乘。</p>
+<h4>2.7.2 共集—共集：复合管/达林顿连接</h4><p>前管发射极电流成为后管基极电流。对于同极性达林顿管，总电流增益 β≈β₁β₂+β₁+β₂，常近似β₁β₂；两个发射结串联，导通需要约两个U<sub>BE</sub>。它提供很高的输入电阻和电流增益，但输出摆幅会受到额外结压降限制。</p>
+<h4>2.7.3 阻容耦合：先算后一级，再回头算前一级</h4><p>第一级的实际交流负载是它的集电极电阻与第二级输入电阻并联；第二级再接最终R<sub>L</sub>。先算R<sub>i2</sub>，再算带这个负载的A<sub>u1</sub>，最后 A<sub>u</sub>=A<sub>u1</sub>A<sub>u2</sub>。总输入电阻取第一级，总输出电阻取末级。</p>
+<details class="answer"><summary>跟着算：教材2.2的静态工作点</summary><div><p>按题给 R<sub>B</sub>=200kΩ、R<sub>C</sub>=5kΩ、V<sub>CC</sub>=12V、U<sub>BE</sub>=0.6V、β=25：</p><p>① 基极回路：I<sub>BQ</sub>=(12−0.6)/200k=57μA。<br>② 集电极电流：I<sub>CQ</sub>=25×57μA=1.425mA。<br>③ 集电极回路：U<sub>CEQ</sub>=12−1.425mA×5kΩ=4.875V。<br>④ 检查：V<sub>C</sub>=4.875V&gt;V<sub>B</sub>=0.6V，集电结反偏，放大区假设成立。</p><p>图解法画出(12V,0)和(0,2.4mA)的连线，再与I<sub>B</sub>≈57μA的特性曲线相交。图上读数会有近似误差；作图时应以教材给定特性曲线为准。</p></div></details>
 </div></details>
 
 <!-- ========== 第3章 ========== -->
-<details class="chapter" id="chapter-3"><summary><h2>第3章 场效应晶体管及其放大电路</h2></summary><div class="chapter-body">
+<details class="chapter" id="chapter-3"><summary><h2>第3章 场效应晶体管及其放大电路</h2></summary><div class="chapter-body"><details class="syllabus"><summary>按教材目录检查本章知识点</summary><table><tr><th>节 / 起始页</th><th>内容</th><th>学完应会</th></tr><tr><td>3.1<br>p.57</td><td>JFET</td><td>结构、输出/转移特性、方程、参数</td></tr><tr><td>3.2<br>p.62</td><td>MOSFET</td><td>N增强、N耗尽、P沟道、沟道调制、参数</td></tr><tr><td>3.3<br>p.70</td><td>放大电路</td><td>直流分析、图解、小信号分析</td></tr></table></details>
 <h3>3.1 结型场效应管JFET</h3>
 <ul>
 <li>JFET分为N沟道、P沟道；依靠<strong>电场改变导电沟道宽度</strong>控制漏极电流I<sub>D</sub>；属于<strong>电压控制型器件，输入几乎不取电流，输入电阻极高。</strong></li>
@@ -322,31 +223,16 @@ V<sub>BQ</sub> ≈ R<sub>b2</sub>/(R<sub>b1</sub>+R<sub>b2</sub>) · V<sub>CC</s
 <br>输入电阻R<sub>i</sub>很大；输出电阻R<sub>o</sub>≈R<sub>d</sub>
 </div>
 
-<h3>第3章复习题型与解题思路（非教材原题编号）</h3>
-<div class="q-item">
-<p>3.1 判断JFET、MOS管类型；根据V<sub>GS</sub>、V<sub>DS</sub>判断管子工作区域：恒流区、可变电阻区、夹断区。</p>
-<details class="answer"><summary>查看解题思路</summary><div>N沟道增强MOS：V<sub>GS</sub>>V<sub>GS(th)</sub>，同时V<sub>DS</sub>≥V<sub>GS</sub>-V<sub>GS(th)</sub>，进入恒流放大区。</div></details>
-</div>
-<div class="q-item">
-<p>3.2 N沟道JFET，已知I<sub>DSS</sub>、V<sub>P</sub>；给定V<sub>GS</sub>求I<sub>D</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>代入转移特性公式 I<sub>D</sub>=I<sub>DSS</sub>(1-V<sub>GS</sub>/V<sub>P</sub>)²，注意V<sub>P</sub>是负数。</div></details>
-</div>
-<div class="q-item">
-<p>3.3 自给偏压共源放大电路，求静态V<sub>GSQ</sub>，I<sub>DQ</sub>，V<sub>DSQ</sub>；再求g<sub>m</sub>，A<sub>u</sub>，R<sub>i</sub>，R<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>V<sub>GSQ</sub>=0-I<sub>DQ</sub>·R<sub>s</sub>，联立转移特性方程求解静态；g<sub>m</sub>求跨导，再代入共源增益公式。</div></details>
-</div>
-<div class="q-item">
-<p>3.4 分压式偏置共源MOS放大电路，求静态Q点；求动态A<sub>u</sub>、R<sub>i</sub>、R<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>先算栅极分压V<sub>G</sub>；V<sub>GSQ</sub>=V<sub>G</sub>-I<sub>DQ</sub>R<sub>s</sub>，联立MOS转移特性求解静态；跨导g<sub>m</sub>后算动态指标。</div></details>
-</div>
-<div class="q-item">
-<p>3.5 共漏（源极跟随器）电路参数已知，求静态Q；求A<sub>u</sub>、R<sub>i</sub>、R<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>共漏A<sub>u</sub>≈g<sub>m</sub>R'<sub>L</sub>/(1+g<sub>m</sub>R'<sub>L</sub>)，电压跟随小于1；R<sub>i</sub>极高，输出电阻R<sub>o</sub>≈1/g<sub>m</sub>。</div></details>
-</div>
+
+<h3>补齐：工作区判断、器件方程与小信号模型</h3>
+<h4>3.1 JFET：“夹断”不一定是截止</h4><p>N沟道JFET正常放大时，栅结反偏。漏端沟道刚夹断后，电流并不立刻为零，而进入近似恒流区；只有栅源电压达到截止电压，沟道整体难以导电，漏极电流才近似为零。</p><div class="formula">设U<sub>P</sub>=U<sub>GS(off)</sub>&lt;0：<br>U<sub>P</sub>≤U<sub>GS</sub>≤0，且U<sub>DS</sub>≥U<sub>GS</sub>−U<sub>P</sub>时，<br>I<sub>D</sub>≈I<sub>DSS</sub>(1−U<sub>GS</sub>/U<sub>P</sub>)²<br>g<sub>m</sub>=(2I<sub>DSS</sub>/|U<sub>P</sub>|)(1−U<sub>GSQ</sub>/U<sub>P</sub>)</div>
+<h4>3.2 N增强、N耗尽和P沟道</h4><p>N增强型在U<sub>GS</sub>=0时通常没有导电沟道；N耗尽型在零栅压时已有沟道，负栅压削弱、正栅压增强。P沟道用U<sub>SG</sub>、U<sub>SD</sub>和阈值绝对值判断更清楚，电流与电压极性对应反转。</p><div class="formula">N增强型，令V<sub>OV</sub>=U<sub>GS</sub>−U<sub>T</sub>：<br>截止：V<sub>OV</sub>≤0；可变电阻区：0≤U<sub>DS</sub>&lt;V<sub>OV</sub>；饱和区：U<sub>DS</sub>≥V<sub>OV</sub>&gt;0。<br>若定义 I<sub>D</sub>=K V<sub>OV</sub>²，则 g<sub>m</sub>=2K V<sub>OV</sub>=2I<sub>DQ</sub>/V<sub>OV</sub>。</div><p>不同书可能把1/2放进K，也可能写在式子前面，代数值前先核对定义。MOS的“饱和区”是常用放大区，和BJT“饱和后不能线性放大”含义不同。</p>
+<h4>3.2.4 沟道长度调制</h4><p>恒流区的曲线仍略向上倾斜，可以用 I<sub>D</sub>≈K V<sub>OV</sub>²(1+λU<sub>DS</sub>)描述，小信号输出电阻近似r<sub>o</sub>≈1/(λI<sub>DQ</sub>)。若不可忽略，共源的交流负载还要并联r<sub>o</sub>。</p>
+<h4>3.3 解二次方程之后，一定筛根</h4><p>先用I<sub>G</sub>≈0求栅极电位，再写 U<sub>GS</sub>=U<sub>G</sub>−I<sub>D</sub>R<sub>S</sub>，与器件方程联立。所得根必须满足所假定工作区，且计算U<sub>DS</sub>后再次检查。图解法就是把偏置直线与转移曲线求交点。</p><div class="formula">共源，未旁路R<sub>S</sub>且忽略r<sub>o</sub>：A<sub>u</sub>≈−g<sub>m</sub>R′<sub>D</sub>/(1+g<sub>m</sub>R<sub>S</sub>)<br>共漏：A<sub>u</sub>≈g<sub>m</sub>R′<sub>S</sub>/(1+g<sub>m</sub>R′<sub>S</sub>)<br>共栅：A<sub>u</sub>≈+g<sub>m</sub>R′<sub>D</sub>，器件输入电阻约1/g<sub>m</sub></div><p>“栅极不取电流”不代表整个放大电路输入电阻无穷大：偏置电阻会限制R<sub>i</sub>。共漏输出电阻约R<sub>S</sub>∥1/g<sub>m</sub>，前提是忽略体效应和r<sub>o</sub>。</p>
 </div></details>
 
 <!-- ========== 第4章 放大电路的频率响应 ========== -->
-<details class="chapter" id="chapter-4"><summary><h2>第4章 放大电路的频率响应</h2></summary><div class="chapter-body">
+<details class="chapter" id="chapter-4"><summary><h2>第4章 放大电路的频率响应</h2></summary><div class="chapter-body"><details class="syllabus"><summary>按教材目录检查本章知识点</summary><table><tr><th>节 / 起始页</th><th>内容</th><th>学完应会</th></tr><tr><td>4.1<br>p.84</td><td>单时间常数RC</td><td>低通、高通及幅频/相频特性</td></tr><tr><td>4.2<br>p.88</td><td>BJT高频模型</td><td>混合π、β频响、共基频响</td></tr><tr><td>4.3<br>p.92</td><td>放大器频响</td><td>共射、改善高频性能、增益带宽、多级</td></tr></table></details>
 <h3>4.1 RC单时间常数电路频率响应</h3>
 <ul>
 <li><strong>RC高通电路：对应放大电路低频段，耦合、旁路电容起作用；频率越低增益越小，相位超前。下限截止频率 f<sub>L</sub>=1/(2πRC)。</strong></li>
@@ -366,36 +252,21 @@ V<sub>BQ</sub> ≈ R<sub>b2</sub>/(R<sub>b1</sub>+R<sub>b2</sub>) · V<sub>CC</s
 <li>低频区：耦合/旁路电容容抗增大，增益下降，产生附加相移。</li>
 <li>高频区：晶体管极间电容起作用，密勒效应使增益随频率升高下降。</li>
 <li>通频带BW = f<sub>H</sub> − f<sub>L</sub>，一般f<sub>H</sub>≫f<sub>L</sub>，BW≈f<sub>H</sub>。</li>
-<li>增益带宽积：|A<sub>um</sub>·BW|≈常数；电压增益做的越大，带宽越窄。</li>
+<li>在相应单主极点近似及限定条件下，|A<sub>um</sub>·BW|可近似为常数；不是任意放大器的普遍定律。</li>
 <li>多级放大电路：只有各级截止频率相差很大时，才可用最大的f<sub>Li</sub>和最小的f<sub>Hi</sub>近似；一般应由总幅频特性求-3 dB点；多级之后带宽变窄。</li>
 </ul>
 <div class="warn-tip">阻容耦合放大电路f<sub>L</sub>不能等于0，不能放大直流；直接耦合放大电路f<sub>L</sub>=0，通带从0Hz开始。</div>
 
-<h3>第4章复习题型与解题思路（非教材原题编号）</h3>
-<div class="q-item">
-<p>4.1 RC高通电路，R、C已知求下限截止频率f<sub>L</sub>，写出电压放大倍数表达式，画波特图幅频特性。</p>
-<details class="answer"><summary>查看解题思路</summary><div>f<sub>L</sub>=1/(2πRC)；波特图：f≫f<sub>L</sub>增益0dB；f&lt;f<sub>L</sub>，斜率+20dB/十倍频。</div></details>
-</div>
-<div class="q-item">
-<p>4.2 RC低通电路R、C已知，求上限截止频率f<sub>H</sub>，写增益表达式，画幅频波特图。</p>
-<details class="answer"><summary>查看解题思路</summary><div>f<sub>H</sub>=1/(2πRC)；f≪f<sub>H</sub>增益0dB；f>f<sub>H</sub>斜率-20dB/十倍频。</div></details>
-</div>
-<div class="q-item">
-<p>4.3 单管共射放大电路给出参数，估算f<sub>L</sub>、f<sub>H</sub>、通频带BW。</p>
-<details class="answer"><summary>查看解题思路</summary><div>低频由耦合电容、旁路电容分别算出多个f<sub>L</sub>，取最大为本级f<sub>L</sub>；高频受密勒电容决定f<sub>H</sub>；BW=f<sub>H</sub>-f<sub>L</sub>。</div></details>
-</div>
-<div class="q-item">
-<p>4.4 两级放大，已知每级f<sub>L1</sub>，f<sub>L2</sub>；f<sub>H1</sub>，f<sub>H2</sub>；求总f<sub>L</sub>，总f<sub>H</sub>，总带宽。</p>
-<details class="answer"><summary>查看解题思路</summary><div>多级：f<sub>L(max)</sub>为总下限；f<sub>H(min)</sub>为总上限；BW = f<sub>H</sub>-f<sub>L</sub>，多级带宽比单级更窄。</div></details>
-</div>
-<div class="q-item">
-<p>4.5 说明增益带宽积物理含义；为什么提高电压放大倍数会使通频带变窄。</p>
-<details class="answer"><summary>查看解题思路</summary><div>在单主极点等特定模型中，增益带宽积近似恒定；不能作为任意放大电路的普遍规律，增益越大带宽越小。</div></details>
-</div>
+
+<h3>补齐：把频响公式和波特图接起来</h3>
+<h4>4.1 幅频、相频、dB</h4><div class="formula">低通 H(jω)=H₀/(1+jωRC)<br>高通 H(jω)=H∞·jωRC/(1+jωRC)<br>电压增益的分贝数：20log₁₀|A<sub>u</sub>|；ω=2πf</div><p>一阶低通在截止点相移−45°，远高于截止频率时幅频渐近线每十倍频下降20dB；一阶高通在截止点相移+45°，低频渐近线每十倍频上升20dB。共射的反相还要另外计入，不能把RC附加相移当总相位。</p>
+<h4>4.2.1～4.2.3 混合π、β截止频率与共基</h4><p>混合π模型包括r<sub>b′e</sub>、g<sub>m</sub>v<sub>b′e</sub>受控源、C<sub>b′e</sub>和C<sub>b′c</sub>，必要时还包括基区电阻和输出电阻。结电容在中频近似开路，在高频必须保留。</p><div class="formula">单极点近似：β(jf)=β₀/(1+jf/f<sub>β</sub>)<br>f<sub>T</sub>=f<sub>β</sub>√(β₀²−1)≈β₀f<sub>β</sub>（β₀≫1）<br>α=β/(1+β)，对应f<sub>α</sub>≈(1+β₀)f<sub>β</sub></div><p>f<sub>β</sub>是β下降至中频值的0.707倍处；f<sub>T</sub>是|β|=1处。共基电流增益虽然小于1，但其截止频率通常比共射电流增益的截止频率高得多。</p>
+<h4>4.3.1 找电容“看见”的电阻</h4><p>估计某个拐点时，计算电容两端看到的等效电阻，不能随便选图上最近的电阻。耦合电容通常看到两侧等效电阻之和；射极旁路电容还会看到经晶体管折算的低阻通路。</p><div class="formula">单个低频极点：f<sub>L</sub>≈1/(2πR<sub>eq</sub>C)<br>共射密勒近似：C<sub>in</sub>≈C<sub>b′e</sub>+(1−A<sub>v</sub>)C<sub>b′c</sub><br>输入极点占主导时：f<sub>H</sub>≈1/(2πR<sub>in,eq</sub>C<sub>in</sub>)</div>
+<h4>4.3.2～4.3.3 改善频响与级联</h4><p>降低高阻节点的等效电阻、减弱密勒效应、采用共射—共基组合，都能改善高频性能，但应同时检查增益、负载和功耗。增益带宽积近似恒定只适用于相应单主极点模型或限定参数变化，不能推广到任意放大器。</p><div class="formula">n个相同、相互加载已计入的单极点级联：<br>f<sub>H,total</sub>=f<sub>H,单级</sub>√(2<sup>1/n</sup>−1)<br>f<sub>L,total</sub>=f<sub>L,单级</sub>/√(2<sup>1/n</sup>−1)</div><p>总增益相乘、相位相加、dB相加。检查波形失真时，还要同时看输入频率是否在通带内，以及输出幅度是否超过线性摆幅。</p>
 </div></details>
 
 <!-- ========== 第5章 差分放大电路 ========== -->
-<details class="chapter" id="chapter-5"><summary><h2>第5章 差分式放大电路</h2></summary><div class="chapter-body">
+<details class="chapter" id="chapter-5"><summary><h2>第5章 差分式放大电路</h2></summary><div class="chapter-body"><details class="syllabus"><summary>按教材目录检查本章知识点</summary><table><tr><th>节 / 起始页</th><th>内容</th><th>学完应会</th></tr><tr><td>5.1～5.3<br>p.104</td><td>零点漂移</td><td>含义、成因、抑制措施</td></tr><tr><td>5.4<br>p.105</td><td>差分电路</td><td>结构、抑制原理、双入双出、双入单出、单入、恒流源</td></tr><tr><td>5.5<br>p.121</td><td>电压传输特性</td><td>尾电流如何在两支路之间转移</td></tr><tr><td>5.6<br>p.121</td><td>四种接法</td><td>统一输入输出定义后比较指标</td></tr></table></details>
 <h3>5.1-5.3 零点漂移（温漂）</h3>
 <ul>
 <li>直接耦合放大电路，输入短路输出电压随温度、电源缓慢变化，称为零点漂移，主要来源是温度变化。</li>
@@ -416,41 +287,27 @@ V<sub>BQ</sub> ≈ R<sub>b2</sub>/(R<sub>b1</sub>+R<sub>b2</sub>) · V<sub>CC</s
 <li>双端输入-双端输出：A<sub>ud</sub>=-βR'<sub>L</sub>/r<sub>be</sub>；A<sub>uc</sub>=0；输出无接地；适合级间。</li>
 <li>双端输入-单端输出：A<sub>ud</sub>= −βR'<sub>L</sub>/(2r<sub>be</sub>)；A<sub>uc</sub>很小但不为0；输出对地。</li>
 <li>单端输入-双端输出：差模增益同双入双出；输入一端接地。</li>
-<li>单端输入-单端输出：差模增益减半，同双入单出。</li>
+<li>单端输入-单端输出：差模部分同双入单出，另需考虑单端输入带来的共模部分。</li>
 </ol>
 <ul>
 <li>发射极恒流源差分放大电路：等效极大R<sub>e</sub>，极大抑制共模，显著提高K<sub>CMR</sub>。恒流源对差模信号无反馈。</li>
 </ul>
 <h3>5.5 电压传输特性；5.6 性能指标汇总表</h3>
 <ul>
-<li>差放电压传输特性u<sub>o</sub>=f(u<sub>id</sub>)；输入差模信号大时进入限幅饱和。</li>
+<li>差放电压传输特性u<sub>o</sub>=f(u<sub>id</sub>)；输入差模信号大时，尾电流逐渐转向一侧，传输特性不再线性。</li>
 </ul>
 
-<h3>第5章复习题型与解题思路（非教材原题编号）</h3>
-<div class="q-item">
-<p>5.1 差分放大电路，双入-双出，给定参数求静态I<sub>BQ</sub>，I<sub>CQ</sub>，U<sub>CEQ</sub>；求差模电压增益A<sub>ud</sub>，差模输入电阻R<sub>id</sub>，输出电阻R<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>静态：两管对称，I<sub>E1</sub>+I<sub>E2</sub>流过R<sub>e</sub>；差模双端输出增益和单管共射一样；R<sub>id</sub>=2r<sub>be</sub>；R<sub>o</sub>=2R<sub>c</sub>。</div></details>
-</div>
-<div class="q-item">
-<p>5.2 差分放大双入-单端输出；参数已知求A<sub>ud</sub>，A<sub>uc</sub>，K<sub>CMR</sub>，R<sub>id</sub>，R<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>单端输出差模增益减半；共模增益不为零；K<sub>CMR</sub>=|A<sub>ud</sub>/A<sub>uc</sub>|；R<sub>id</sub>=2r<sub>be</sub>，R<sub>o</sub>=R<sub>c</sub>。</div></details>
-</div>
-<div class="q-item">
-<p>5.3 单端输入-单端输出差分放大，计算A<sub>ud</sub>，A<sub>uc</sub>，K<sub>CMR</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>单端输入等效为双端输入，一半差模，一半共模；差模增益同双入单端。</div></details>
-</div>
-<div class="q-item">
-<p>5.4 带恒流源差分放大电路；求恒流源I<sub>0</sub>，差分对管静态电流；A<sub>ud</sub>，K<sub>CMR</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>恒流源总电流I<sub>0</sub>，两管I<sub>CQ</sub>≈I<sub>0</sub>/2；恒流源等效极大R<sub>e</sub>，A<sub>uc</sub>很小，K<sub>CMR</sub>大幅提高。</div></details>
-</div>
-<div class="q-item">
-<p>5.5 输入u<sub>i1</sub>、u<sub>i2</sub>，分解出差模u<sub>id</sub>与共模u<sub>ic</sub>分量。</p>
-<details class="answer"><summary>查看解题思路</summary><div>u<sub>ic</sub>=(u<sub>i1</sub>+u<sub>i2</sub>)/2；u<sub>id</sub>=u<sub>i1</sub>-u<sub>i2</sub>。</div></details>
-</div>
+
+<h3>补齐：差模等效、共模等效与负载折算</h3>
+<h4>5.1～5.4 为什么两只管能抑制温漂</h4><p>匹配器件受温度影响时，两支路电流往往同方向变化；取两个集电极电压之差时，共同变化相减。差模输入则让一边增大、另一边减小，相减后有效信号增强。零漂还可能来自电源变化与器件不匹配，并非只有温度一个原因。</p>
+<p>静态对称时，两支路平分尾电流：I<sub>E1Q</sub>=I<sub>E2Q</sub>≈I<sub>T</sub>/2。先由尾电阻或恒流源求I<sub>T</sub>，再算各管Q点与r<sub>be</sub>。</p>
+<h4>5.4.3～5.4.5 先定义差和共，再套增益</h4><div class="formula">u<sub>id</sub>=u<sub>i1</sub>−u<sub>i2</sub>；u<sub>ic</sub>=(u<sub>i1</sub>+u<sub>i2</sub>)/2<br>差模：两输入分别为+u<sub>id</sub>/2、−u<sub>id</sub>/2<br>共模：两输入都为u<sub>ic</sub></div><p>纯差模时，公共发射极节点为交流虚地。双端输出若跨接一个R<sub>L</sub>，半电路中每一边看到的是<strong>R<sub>L</sub>/2</strong>，因此R′<sub>C</sub>=R<sub>C</sub>∥(R<sub>L</sub>/2)。单端输出负载对地时，按实际支路接法重新列方程。</p><p>单端输入u<sub>i1</sub>=u<sub>i</sub>、u<sub>i2</sub>=0，并不是“只有差模”：它同时包含u<sub>id</sub>=u<sub>i</sub>和u<sub>ic</sub>=u<sub>i</sub>/2。严格计算需把差模输出与共模输出相加。</p>
+<h4>5.4.6 尾电流源的意义</h4><p>共模半电路中，每侧看到的尾电阻是2R<sub>E</sub>。单端共模增益可近似写成 −βR<sub>C</sub>/[r<sub>be</sub>+2(β+1)R<sub>E</sub>]（对称、空载、忽略输出电阻）。尾电流源动态电阻越大，共模增益越小。完全对称的双端输出共模增益理想为零，实际失配会使其不为零。</p>
+<h4>5.5～5.6 从线性放大到电流转向</h4><div class="formula">理想匹配双管、忽略基极电流时：<br>I<sub>C1</sub>−I<sub>C2</sub>≈I<sub>T</sub>tanh[u<sub>id</sub>/(2U<sub>T</sub>)]</div><p>输入差值很小时曲线近似直线；差值很大时尾电流几乎全部流入一侧，不能继续按小信号增益外推。四种接法的比较必须保持u<sub>id</sub>和输出极性定义一致；单端从另一侧取输出，增益符号反转。</p>
 </div></details>
 
 <!-- ========== 第6章 集成运算放大器 ========== -->
-<details class="chapter" id="chapter-6"><summary><h2>第6章 集成运算放大器</h2></summary><div class="chapter-body">
+<details class="chapter" id="chapter-6"><summary><h2>第6章 集成运算放大器</h2></summary><div class="chapter-body"><details class="syllabus"><summary>按教材目录检查本章知识点</summary><table><tr><th>节 / 起始页</th><th>内容</th><th>学完应会</th></tr><tr><td>6.1<br>p.127</td><td>集成运放</td><td>内部结构和传输特性</td></tr><tr><td>6.2<br>p.131</td><td>理想模型</td><td>理想参数、线性区与饱和区</td></tr><tr><td>6.3<br>p.132</td><td>线性应用</td><td>比例、加法、减法、积分、微分</td></tr><tr><td>6.4<br>p.140</td><td>非线性应用</td><td>单门限、迟滞、集成比较器、性能比较</td></tr></table></details>
 <h3>6.1 集成运放概述</h3>
 <ul>
 <li>集成运放内部四部分：输入级（差分放大，高K<sub>CMR</sub>）；中间级（高增益，共射放大）；输出级（互补功率输出，低输出电阻）；偏置电路（恒流源给各级提供静态电流）。</li>
@@ -465,7 +322,7 @@ V<sub>BQ</sub> ≈ R<sub>b2</sub>/(R<sub>b1</sub>+R<sub>b2</sub>) · V<sub>CC</s
 <br>①<strong>虚短：线性工作区，u<sub>+</sub> ≈ u<sub>-</sub>（输入差模电压近似为0）</strong>
 <br>②<strong>虚断：i<sub>+</sub> ≈ 0 ，i<sub>-</sub> ≈ 0，输入端不取电流</strong>
 </li>
-<div class="warn-tip">虚短、虚断<strong>只在线性区成立</strong>；非线性（比较器）只有虚断，没有虚短！</div>
+<div class="warn-tip"><strong>虚短只适用于线性负反馈分析</strong>；理想模型的虚断在比较器分析中也可使用。</div>
 </ul>
 
 <h3>6.3 理想运放线性应用（负反馈闭环）</h3>
@@ -515,43 +372,16 @@ u<sub>o</sub> = − R<sub>f</sub>C · du<sub>i</sub>/dt
 <li><strong>迟滞电压比较器（施密特比较器）</strong>：引入正反馈，存在上门限U<sub>T+</sub>、下门限U<sub>T-</sub>；回差电压ΔU<sub>T</sub>=U<sub>T+</sub>−U<sub>T-</sub>；抗噪声能力强，用于波形整形。</li>
 </ul>
 
-<h3>第6章复习题型与解题思路（非教材原题编号）</h3>
-<div class="q-item">
-<p>6.1 反相比例运算，R<sub>1</sub>、R<sub>f</sub>给定，求A<sub>uf</sub>，u<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>线性区，虚断+虚地；A<sub>uf</sub>=-R<sub>f</sub>/R<sub>1</sub>；u<sub>o</sub>=A<sub>uf</sub>·u<sub>i</sub>。</div></details>
-</div>
-<div class="q-item">
-<p>6.2 同相比例运算，求A<sub>uf</sub>、u<sub>o</sub>；电压跟随器分析。</p>
-<details class="answer"><summary>查看解题思路</summary><div>虚短虚断；A<sub>uf</sub>=1+R<sub>f</sub>/R<sub>1</sub>；电压跟随器A=1。</div></details>
-</div>
-<div class="q-item">
-<p>6.3 反相加法电路，多个输入，求输出u<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>虚地，各输入电流相加，全部流过反馈电阻R<sub>f</sub>。</div></details>
-</div>
-<div class="q-item">
-<p>6.4 差分减法运算电路，给定电阻，求u<sub>o</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>叠加定理：同相输入分量 + 反相输入分量；满足电阻匹配条件公式直接代入。</div></details>
-</div>
-<div class="q-item">
-<p>6.5 积分运算电路，输入直流/方波，求输出表达式，画输出波形。</p>
-<details class="answer"><summary>查看解题思路</summary><div>u<sub>o</sub> = −1/(R₁C) ∫uᵢdt；直流输入输出线性变化，直到运放输出饱和。</div></details>
-</div>
-<div class="q-item">
-<p>6.6 微分运算，输入三角波，求输出波形。</p>
-<details class="answer"><summary>查看解题思路</summary><div>输出正比输入信号的变化斜率；三角波输入输出为方波脉冲。</div></details>
-</div>
-<div class="q-item">
-<p>6.7 单门限电压比较器，给定参考电平，输入正弦波，画出输出u<sub>o</sub>波形。</p>
-<details class="answer"><summary>查看解题思路</summary><div>开环，无虚短；若输入接同相端、参考接反相端：输入大于参考值输出正饱和，反之负饱和；反相输入时极性相反，输出方波。</div></details>
-</div>
-<div class="q-item">
-<p>6.8 迟滞比较器，计算上门限、下门限、回差电压；输入正弦波画输出波形。</p>
-<details class="answer"><summary>查看解题思路</summary><div>正反馈，输出高低两种饱和电平；分别计算U<sub>T+</sub>，U<sub>T-</sub>，回差ΔU<sub>T</sub>=U<sub>T+</sub>−U<sub>T-</sub>。</div></details>
-</div>
+
+<h3>补齐：运放题最重要的是先判工作区</h3>
+<h4>6.1～6.2 理想模型和实际限制</h4><p>在线性负反馈且输出未饱和时，才能用虚短；理想输入电阻无穷大带来的虚断，也可以用于理想比较器分析。实际运放还受失调电压、输入偏置电流、共模范围、输出摆幅、带宽、转换速率限制。题目给出这些参数时，应检查结果是否超限。</p>
+<h4>6.3 不背复杂公式，直接列节点电流</h4><p>先求同相端电位，再令反相端与它近似相等；用虚断在反相端列KCL。多个输入分别写电流，电容写 i=C·du/dt，就能统一推导比例、加减、积分与微分。</p><div class="formula">减法电路明确约定：u₁经R₁接负端，R<sub>f</sub>反馈；u₂经R₂接正端，正端经R₃接地。<br>u<sub>o</sub>=(1+R<sub>f</sub>/R₁)·[R₃/(R₂+R₃)]u₂−(R<sub>f</sub>/R₁)u₁<br>当R<sub>f</sub>/R₁=R₃/R₂时，u<sub>o</sub>=(R<sub>f</sub>/R₁)(u₂−u₁)。</div><p>积分器 u<sub>o</sub>(t)=u<sub>o</sub>(t₀)−(1/RC)∫<sub>t₀</sub><sup>t</sup>u<sub>i</sub>(τ)dτ。分段波形题要把上一段末值作为下一段初值，并检查是否达到输出限幅；理想微分器对突变给尖脉冲，实际峰值受带宽与摆幅限制。</p>
+<h4>6.4.1～6.4.2 迟滞门限的通用算法</h4><p>先假设输出为高电平U<sub>OH</sub>，求正反馈节点电位，令u<sub>+</sub>=u<sub>−</sub>得到一个翻转门限；再假设输出为低电平U<sub>OL</sub>，同样求另一个门限。最后沿输入上升、下降方向检查输出如何翻转。比较器并非始终满足虚短，只有在求临界翻转条件时才令两输入相等。</p><div class="formula">若输入接负端，正端通过R<sub>o</sub>接输出、通过R<sub>r</sub>接基准U<sub>REF</sub>：<br>u<sub>+</sub>=(R<sub>r</sub>u<sub>o</sub>+R<sub>o</sub>U<sub>REF</sub>)/(R<sub>o</sub>+R<sub>r</sub>)。<br>分别代入U<sub>OH</sub>、U<sub>OL</sub>得到两门限。</div>
+<h4>6.4.3～6.4.4 集成比较器与运放的区别</h4><p>比较器为快速翻转设计；有些采用集电极开路输出，需要上拉电阻才能形成高电平。输出高低电平由输出结构、上拉电源及负载决定，不能默认等于供电轨。迟滞比较器有两个门限，能避免输入在单门限附近叠加噪声时反复跳变；单门限比较器则没有这段回差。</p>
 </div></details>
 
 <!-- ==========第7章 反馈放大电路 ========== -->
-<details class="chapter" id="chapter-7"><summary><h2>第7章 反馈放大电路</h2></summary><div class="chapter-body">
+<details class="chapter" id="chapter-7"><summary><h2>第7章 反馈放大电路</h2></summary><div class="chapter-body"><details class="syllabus"><summary>按教材目录检查本章知识点</summary><table><tr><th>节 / 起始页</th><th>内容</th><th>学完应会</th></tr><tr><td>7.1<br>p.151</td><td>反馈分类</td><td>有无、交直流、正负、串并联、电压电流</td></tr><tr><td>7.2<br>p.157</td><td>四种组态</td><td>电压串联/并联、电流串联/并联</td></tr><tr><td>7.3<br>p.161</td><td>闭环增益</td><td>一般表达式与反馈深度</td></tr><tr><td>7.4<br>p.163</td><td>性能影响</td><td>增益稳定性、输入电阻、输出电阻</td></tr><tr><td>7.5<br>p.166</td><td>深负反馈</td><td>净输入近似为零，反馈网络决定增益</td></tr></table></details>
 <h3>7.1 反馈基本概念与分类</h3>
 <ul>
 <li>反馈：把输出回路信号（电压/电流）取出一部分，送回到输入回路，与输入信号叠加。</li>
@@ -599,31 +429,16 @@ A<sub>f</sub> = A / (1+AF)
 <li>根据组态，直接写出反馈信号，再求解闭环电压增益A<sub>uf</sub>=u<sub>o</sub>/u<sub>i</sub>。</li>
 </ul>
 
-<h3>第7章复习题型与解题思路（非教材原题编号）</h3>
-<div class="q-item">
-<p>7.1 判断反馈组态：直流/交流；电压/电流；串联/并联；正反馈还是负反馈（瞬时极性法）。</p>
-<details class="answer"><summary>查看解题思路</summary><div>1.看反馈通路有无隔直电容区分交直流；2.输出短路法区分电压电流；3.输入端看电压叠加还是电流叠加区分串并联；4.瞬时极性法判断正负反馈。</div></details>
-</div>
-<div class="q-item">
-<p>7.2 深度负反馈放大电路，电压串联负反馈，估算A<sub>uf</sub>=u<sub>o</sub>/u<sub>i</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>深度负反馈 u<sub>i</sub>≈u<sub>f</sub>；求出反馈电压u<sub>f</sub>与u<sub>o</sub>关系，直接求A<sub>uf</sub>。</div></details>
-</div>
-<div class="q-item">
-<p>7.3 深度负反馈，电压并联负反馈，估算A<sub>uf</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>并联深度负反馈 i<sub>i</sub>≈i<sub>f</sub>；注意输入是电流，再转换电压增益。</div></details>
-</div>
-<div class="q-item">
-<p>7.4 深度负反馈，电流串联负反馈，求A<sub>uf</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>u<sub>i</sub>≈u<sub>f</sub>；反馈电压取自输出电流，u<sub>f</sub>∝i<sub>o</sub>；u<sub>o</sub>=i<sub>o</sub>·R'<sub>L</sub>。</div></details>
-</div>
-<div class="q-item">
-<p>7.5 说明四种负反馈组态分别对输入电阻、输出电阻的影响；电压、电流反馈分别稳定什么输出量。</p>
-<details class="answer"><summary>查看解题思路</summary><div>串联R<sub>i</sub>变大，并联R<sub>i</sub>变小；电压R<sub>o</sub>变小，稳定输出电压；电流R<sub>o</sub>变大，稳定输出电流。</div></details>
-</div>
+
+<h3>补齐：四种反馈分别在“放大什么”</h3>
+<h4>7.1 判断顺序</h4><p>先找输出回到输入的通路，再在直流/交流等效图上分别判断。瞬时极性法要观察反馈是否削弱<strong>净输入</strong>，不能仅凭反馈接到某个电极就断定正负。输出短路法是小信号理论判别，不是让你实际短接带电输出。</p>
+<h4>7.2～7.3 A和F的量纲要配对</h4><table><tr><th>组态</th><th>开环增益A</th><th>反馈系数F</th><th>深反馈结果1/F</th></tr><tr><td>电压串联</td><td>u<sub>o</sub>/u<sub>d</sub></td><td>u<sub>f</sub>/u<sub>o</sub></td><td>电压增益</td></tr><tr><td>电压并联</td><td>u<sub>o</sub>/i<sub>d</sub>（Ω）</td><td>i<sub>f</sub>/u<sub>o</sub>（S）</td><td>互阻增益（Ω）</td></tr><tr><td>电流串联</td><td>i<sub>o</sub>/u<sub>d</sub>（S）</td><td>u<sub>f</sub>/i<sub>o</sub>（Ω）</td><td>跨导增益（S）</td></tr><tr><td>电流并联</td><td>i<sub>o</sub>/i<sub>d</sub></td><td>i<sub>f</sub>/i<sub>o</sub></td><td>电流增益</td></tr></table><p>AF无量纲，但1/F未必是电压增益。若题目要求u<sub>o</sub>/u<sub>i</sub>，还需结合输入电阻或负载关系换算。</p>
+<h4>7.4 性能变化的定量关系</h4><div class="formula">F固定、负反馈模型成立时：<br>(dA<sub>f</sub>/A<sub>f</sub>)/(dA/A)=1/(1+AF)<br>串联输入：R<sub>if</sub>≈R<sub>i</sub>(1+AF)；并联输入：R<sub>if</sub>≈R<sub>i</sub>/(1+AF)<br>电压取样：R<sub>of</sub>≈R<sub>o</sub>/(1+AF)；电流取样：R<sub>of</sub>≈R<sub>o</sub>(1+AF)</div><p>这些是标准反馈模型中的关系，反馈网络加载不能漏掉。高频相移可能使原本的负反馈变成正反馈，因此“反馈越深越好”并不总成立。</p>
+<h4>7.5 解题落笔顺序</h4><ol><li>标净输入量、输出量、反馈量及参考方向。</li><li>串联令净输入电压近似零；并联令净输入电流近似零。</li><li>用反馈网络KCL/KVL写输入—输出关系。</li><li>换算到题目要求的增益，检查负号与量纲。</li></ol>
 </div></details>
 
 <!-- ==========第8章 功率放大电路 ========== -->
-<details class="chapter" id="chapter-8"><summary><h2>第8章 功率放大电路</h2></summary><div class="chapter-body">
+<details class="chapter" id="chapter-8"><summary><h2>第8章 功率放大电路</h2></summary><div class="chapter-body"><details class="syllabus"><summary>按教材目录检查本章知识点</summary><table><tr><th>节 / 起始页</th><th>内容</th><th>学完应会</th></tr><tr><td>8.1<br>p.173</td><td>功放特点</td><td>功率、效率、失真、管耗、器件额定值</td></tr><tr><td>8.2<br>p.174</td><td>乙类双电源互补</td><td>导通路径、功率计算、交越失真</td></tr><tr><td>8.3<br>p.177</td><td>甲乙类单电源互补</td><td>静态偏置、隔直电容、输出摆幅</td></tr></table></details>
 <h3>8.1 功放电路特点</h3>
 <ul>
 <li>功率放大电路：输出大电压大电流，向负载输送功率；关注<strong>最大输出功率P<sub>omax</sub>、电源功率P<sub>V</sub>、转换效率η、管耗P<sub>T</sub></strong>。
@@ -641,7 +456,7 @@ A<sub>f</sub> = A / (1+AF)
 <br>P<sub>omax</sub> = V<sub>CC</sub>²/(2R<sub>L</sub>)
 <br>电源提供功率： P<sub>V</sub> = 2V<sub>CC</sub>²/(πR<sub>L</sub>)
 <br>最大效率 η<sub>max</sub> = π/4 ≈78.5%
-<br>单管最大管耗 P<sub>T1max</sub> ≈ 0.2 P<sub>omax</sub>
+<br>单管最大平均管耗 P<sub>T1max</sub> = V<sub>CC</sub>²/(π²R<sub>L</sub>) ≈ 0.203 P<sub>omax</sub>
 <br>功放管耐压 |U<sub>(BR)CEO</sub>| > 2V<sub>CC</sub>
 </div>
 
@@ -658,27 +473,15 @@ P<sub>omax</sub> = (V<sub>CC</sub>/2)² / (2R<sub>L</sub>) = V<sub>CC</sub>²/(8
 
 <div class="warn-tip">乙类OCL最大效率78.5%是理想极限，实际电路小于该数值；交越失真解决方法：设置甲乙类微小静态偏置。</div>
 
-<h3>第8章复习题型与解题思路（非教材原题编号）</h3>
-<div class="q-item">
-<p>8.1 OCL乙类互补对称电路，V<sub>CC</sub>、R<sub>L</sub>已知，忽略U<sub>CES</sub>，求P<sub>omax</sub>、P<sub>V</sub>、η，单管最大管耗。</p>
-<details class="answer"><summary>查看解题思路</summary><div>直接代入OCL理想公式；P<sub>omax</sub>=V<sub>CC</sub>²/(2R<sub>L</sub>)；η=π/4≈78.5%；P<sub>T1max</sub>≈0.2P<sub>omax</sub>。</div></details>
-</div>
-<div class="q-item">
-<p>8.2 OTL单电源功放，V<sub>CC</sub>，R<sub>L</sub>给定，求P<sub>omax</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>等效电源V'=V<sub>CC</sub>/2；P<sub>omax</sub>=(V<sub>CC</sub>/2)²/(2R<sub>L</sub>)=V<sub>CC</sub>²/(8R<sub>L</sub>)。</div></details>
-</div>
-<div class="q-item">
-<p>8.3 什么是交越失真？产生的原因？甲乙类功放如何消除交越失真？</p>
-<details class="answer"><summary>查看解题思路</summary><div>乙类无静态偏置，三极管死区电压，输入小信号时两管都不导通，输出零点附近失真；甲乙类设置微小静态正向偏置，克服死区电压消除交越失真。</div></details>
-</div>
-<div class="q-item">
-<p>8.4 OCL电路选择功放管，求I<sub>CM</sub>、P<sub>TM</sub>、反向击穿电压U<sub>(BR)CEO</sub>参数要求。</p>
-<details class="answer"><summary>查看解题思路</summary><div>I<sub>CM</sub> > V<sub>CC</sub>/R<sub>L</sub>；P<sub>TM</sub> >0.2P<sub>omax</sub>；U<sub>(BR)CEO</sub> >2V<sub>CC</sub>。</div></details>
-</div>
+
+<h3>补齐：峰值、有效值、管耗不要混算</h3>
+<h4>8.1 导通角与功率</h4><p>甲类导通360°；乙类每管约180°；甲乙类每管大于180°而小于360°。功率题首先注明U<sub>om</sub>是正弦峰值，U<sub>o</sub>是有效值；有效值为峰值/√2。</p>
+<h4>8.2 任意输出幅度下的乙类OCL</h4><div class="formula">对称±V<sub>CC</sub>、理想乙类、纯电阻负载：<br>P<sub>o</sub>=U<sub>om</sub>²/(2R<sub>L</sub>)<br>P<sub>V</sub>=2V<sub>CC</sub>U<sub>om</sub>/(πR<sub>L</sub>)<br>η=πU<sub>om</sub>/(4V<sub>CC</sub>)<br>两管总耗散 P<sub>T</sub>=P<sub>V</sub>−P<sub>o</sub></div><p>单管最大发热发生在 U<sub>om</sub>=2V<sub>CC</sub>/π 附近，而不是最大输出幅度处。此时每管最大平均管耗为 V<sub>CC</sub>²/(π²R<sub>L</sub>)。选管还需核对最大电流约U<sub>om,max</sub>/R<sub>L</sub>、截止管耐压约2V<sub>CC</sub>，并考虑实际裕量。</p><p>考虑饱和及驱动限制，U<sub>om,max</sub>通常小于V<sub>CC</sub>，常用近似V<sub>CC</sub>−U<sub>CE(sat)</sub>。甲乙类有静态功耗，不能机械使用理想乙类效率式。</p>
+<h4>8.3 单电源OTL的两个“输出电位”</h4><p>电容前的输出中点静态约V<sub>CC</sub>/2；电容后的负载端直流约0。可用交流摆幅约V<sub>CC</sub>/2，故理想最大功率为V<sub>CC</sub>²/(8R<sub>L</sub>)。隔直电容与负载形成低频限制；容量太小，低频输出会衰减。</p><p>交越失真来自两个管子在零点附近都未充分导通。二极管或偏置网络给两发射结预置小电流，可减小死区；偏置过大又会增加静态发热。</p>
 </div></details>
 
 <!-- ==========第9章 信号处理与信号产生电路 ========== -->
-<details class="chapter" id="chapter-9"><summary><h2>第9章 信号处理与信号产生电路</h2></summary><div class="chapter-body">
+<details class="chapter" id="chapter-9"><summary><h2>第9章 信号处理与信号产生电路</h2></summary><div class="chapter-body"><details class="syllabus"><summary>按教材目录检查本章知识点</summary><table><tr><th>节 / 起始页</th><th>内容</th><th>学完应会</th></tr><tr><td>9.1<br>p.183</td><td>有源滤波</td><td>一阶、二阶低通/高通/带通/带阻</td></tr><tr><td>9.2<br>p.190</td><td>正弦振荡</td><td>条件、文氏桥、RC移相、LC、石英晶体</td></tr><tr><td>9.3<br>p.199</td><td>方波</td><td>比较器翻转与电容指数充放电</td></tr><tr><td>9.4<br>p.201</td><td>锯齿波</td><td>分段积分、充放电斜率和周期</td></tr></table></details>
 <h3>9.1 有源滤波电路</h3>
 <ul>
 <li>滤波器功能：允许某一部分频率信号通过，抑制另外一部分频率。分为低通LPF、高通HPF、带通BPF、带阻BEF。</li>
@@ -699,31 +502,24 @@ P<sub>omax</sub> = (V<sub>CC</sub>/2)² / (2R<sub>L</sub>) = V<sub>CC</sub>²/(8
 
 <h3>9.3-9.4 非正弦波产生电路</h3>
 <ul>
-<li>方波发生器：迟滞比较器+RC充放电回路；输出方波，周期 T ≈ 2RC ln(1+2R<sub>2</sub>/R<sub>1</sub>)。</li>
+<li>方波发生器：迟滞比较器+RC充放电回路；输出方波，对称输出与门限时，周期由门限比例k决定，见本章补充公式。</li>
 <li>锯齿波发生器：比较器+积分电路，产生锯齿波形。</li>
 </ul>
 
-<h3>第9章复习题型与解题思路（非教材原题编号）</h3>
-<div class="q-item">
-<p>9.1 判断电路是否满足正弦波振荡相位条件；RC桥式电路R、C已知求振荡频率f<sub>0</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>RC桥式 f<sub>0</sub>=1/(2πRC)；相位条件总相移0或者360°；A<sub>uf</sub>&gt;3满足起振幅值条件。</div></details>
-</div>
-<div class="q-item">
-<p>9.2 一阶有源低通滤波，求截止频率f<sub>p</sub>，写出电压传输函数。</p>
-<details class="answer"><summary>查看解题思路</summary><div>f<sub>p</sub>=1/(2πRC)；低频信号通过，高频被衰减。</div></details>
-</div>
-<div class="q-item">
-<p>9.3 方波产生电路，R、C、分压电阻给定，求输出方波周期T。</p>
-<details class="answer"><summary>查看解题思路</summary><div>T≈2RC ln(1+2R₂/R₁)；改变RC可以调节输出方波频率。</div></details>
-</div>
-<div class="q-item">
-<p>9.4 电容三点式LC振荡电路，L、C参数，求振荡频率f<sub>0</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>f<sub>0</sub>≈1/(2π√(LC))。</div></details>
-</div>
+
+<h3>补齐：滤波器四类、振荡器五类</h3>
+<h4>9.1.1～9.1.2 一阶与二阶的区别</h4><p>有源滤波器依靠运放提供增益与隔离；RC网络决定选频。先把电容写成阻抗1/(sC)，用节点方程求H(s)，再令s=jω。阶数由传递函数分母的最高次数决定，不是只数图上的电容。</p>
+<h4>9.1.3～9.1.6 二阶标准形式</h4><p>令 D(s)=s²+(ω₀/Q)s+ω₀²，ω₀为固有角频率，Q为品质因数。下面A₀表示相应通带或中心频率增益，具体大小由实际电路确定。</p><table><tr><th>类型</th><th>H(s)</th><th>看两端和中心</th></tr><tr><td>低通</td><td>A₀ω₀²/D(s)</td><td>低频通过，高频衰减</td></tr><tr><td>高通</td><td>A₀s²/D(s)</td><td>直流被阻，高频通过</td></tr><tr><td>带通</td><td>A₀(ω₀/Q)s/D(s)</td><td>两端衰减，ω₀附近通过</td></tr><tr><td>带阻</td><td>A₀(s²+ω₀²)/D(s)</td><td>理想在ω₀处零输出</td></tr></table><p>二阶低通/高通的远端滚降为40dB/十倍频；二阶带通的两侧各20dB/十倍频。标准带通BW=f₀/Q，Q越大通带越窄。二阶低通的ω₀不总是−3dB截止频率；Q=1/√2的巴特沃思形式才重合。</p>
+<h4>9.2.1 起振和稳幅分别是谁负责</h4><p>直流电源提供能量，放大环节补偿损耗，选频网络选择频率，正反馈维持振荡，非线性稳幅使有效环路增益回到1。没有外加周期输入也能产生周期输出，但不能没有电源。</p>
+<h4>9.2.2～9.2.3 文氏桥与RC移相</h4><p>文氏桥两组R、C相等时，f₀=1/(2πRC)，选频反馈系数为1/3，稳态放大倍数约3、起振略大于3。RC移相振荡由反相放大器提供180°，RC链再提供180°。常见三级等值、无缓冲RC梯形移相网络在理想驱动/负载条件下有 f₀≈1/(2πRC√6)、最小放大倍数约29；实际网络若受加载，必须重新求相位与幅值条件。</p>
+<h4>9.2.4 LC三点式</h4><p>按交流等效电路判断反馈极性。电容三点式的谐振电容通常是C₁、C₂串联等效：C<sub>eq</sub>=C₁C₂/(C₁+C₂)，f₀≈1/(2π√(LC<sub>eq</sub>))。电感三点式需按线圈同名端考虑互感，不能永远用L₁+L₂。变压器反馈同样必须看绕组极性。</p>
+<h4>9.2.5 石英晶体</h4><p>等效电路包括动态R、L、C支路及静态电容；存在串联、并联谐振频率。两者很接近，品质因数很高，因此选频尖锐、频率稳定。晶体在不同频段表现为不同电抗，需结合具体振荡接法判断。</p>
+<h4>9.3 方波：门限+指数充放电</h4><div class="formula">若比较器对称输出±U<sub>O</sub>、门限±kU<sub>O</sub>（0&lt;k&lt;1），电容经R向输出充放电：<br>T=2RC·ln[(1+k)/(1−k)]</div><p>先由反馈分压求k，再代公式，可以避免不同图中R₁、R₂命名相反造成错套。更一般地，用u<sub>C</sub>(t)=U∞+[u<sub>C</sub>(0)−U∞]e<sup>−t/RC</sup>，从一个门限算到另一个门限。</p>
+<h4>9.4 三角波与锯齿波</h4><p>比较器输出恒定正/负电平时，积分器输出线性升降，斜率du<sub>o</sub>/dt=−u<sub>in</sub>/(RC)。两段斜率绝对值相同得到对称三角波；用二极管和不同电阻使充、放电速度不同，得到锯齿波。每段时间=该段电压变化量÷斜率绝对值，周期是两段之和。</p>
 </div></details>
 
 <!-- ==========第10章 直流稳压电源 ========== -->
-<details class="chapter" id="chapter-10"><summary><h2>第10章 直流稳压电源</h2></summary><div class="chapter-body">
+<details class="chapter" id="chapter-10"><summary><h2>第10章 直流稳压电源</h2></summary><div class="chapter-body"><details class="syllabus"><summary>按教材目录检查本章知识点</summary><table><tr><th>节 / 起始页</th><th>内容</th><th>学完应会</th></tr><tr><td>10.1<br>p.208</td><td>电源组成</td><td>变压→整流→滤波→稳压</td></tr><tr><td>10.2<br>p.208</td><td>质量指标</td><td>稳压系数、输出电阻、纹波</td></tr><tr><td>10.3<br>p.209</td><td>整流滤波</td><td>半波、桥式、全波、滤波、倍压</td></tr><tr><td>10.4<br>p.217</td><td>稳压电路</td><td>稳压管、串联反馈稳压</td></tr><tr><td>10.5<br>p.220</td><td>三端稳压器</td><td>固定输出、可调输出、压差与功耗</td></tr></table></details>
 <h3>10.1 直流稳压电源四大部分</h3>
 <ul>
 <li>电源变压器：把电网220V交流变换为合适幅值的交流电压u<sub>2</sub>；</li>
@@ -753,35 +549,24 @@ P<sub>omax</sub> = (V<sub>CC</sub>/2)² / (2R<sub>L</sub>) = V<sub>CC</sub>²/(8
 
 <div class="warn-tip">桥式整流，电容滤波，负载开路输出电压升高为√2U<sub>2</sub>，带载正常1.2U<sub>2</sub>。</div>
 
-<h3>第10章复习题型与解题思路（非教材原题编号）</h3>
-<div class="q-item">
-<p>10.1 单相桥式整流电路，U<sub>2</sub>已知，无滤波，求U<sub>O(AV)</sub>，每个二极管平均电流I<sub>D</sub>，二极管反向耐压U<sub>RM</sub>。</p>
-<details class="answer"><summary>查看解题思路</summary><div>U<sub>O(AV)</sub>=0.9U₂；每个二极管电流I<sub>D</sub>=I<sub>O(AV)</sub>/2；U<sub>RM</sub>=√2 U₂。</div></details>
-</div>
-<div class="q-item">
-<p>10.2 桥式整流+电容滤波，U<sub>2</sub>；分空载、带负载两种情况求输出电压平均值。</p>
-<details class="answer"><summary>查看解题思路</summary><div>空载U<sub>O</sub>=√2U₂；带满足RC≥(3-5)T/2，U<sub>O(AV)</sub>≈1.2U₂。</div></details>
-</div>
-<div class="q-item">
-<p>10.3 稳压管稳压电路，U<sub>I</sub>、U<sub>Z</sub>，负载R<sub>L</sub>，求限流电阻R取值范围。</p>
-<details class="answer"><summary>查看解题思路</summary><div>I<sub>Z</sub>必须在I<sub>Zmin</sub>~I<sub>Zmax</sub>之间；I<sub>R</sub>=(U<sub>I</sub>-U<sub>Z</sub>)/R；I<sub>Z</sub>=I<sub>R</sub>-I<sub>L</sub>，解R上下限。</div></details>
-</div>
-<div class="q-item">
-<p>10.4 串联型稳压电源，基准U<sub>REF</sub>，采样分压电阻R1,R2，求输出电压可调范围。</p>
-<details class="answer"><summary>查看解题思路</summary><div>U<sub>O</sub>=U<sub>REF</sub>(1+R<sub>下</sub>/R<sub>上</sub>)；电位器滑动改变分压，得到最大最小输出。</div></details>
-</div>
-<div class="q-item">
-<p>10.5 三端稳压器7812应用电路，说明输出电压；输入电压最低要求。</p>
-<details class="answer"><summary>查看解题思路</summary><div>7812输出固定+12V；输入至少比输出大2~3V压差，才能正常稳压。</div></details>
-</div>
-</div></details></main><footer>模电学习手册 · 由两份上传讲义合并整理。公式请结合适用条件使用。</footer>
+
+<h3>补齐：电源指标、全波、倍压和稳压边界</h3>
+<h4>10.2 怎样评价稳不稳</h4><p>稳压系数描述输入电压变化传到输出的比例，常用 S=(ΔU<sub>O</sub>/U<sub>O</sub>)/(ΔU<sub>I</sub>/U<sub>I</sub>)；输出电阻用|ΔU<sub>O</sub>/ΔI<sub>O</sub>|描述负载变化引起的电压变化。纹波是直流上叠加的周期波动，纹波系数常为纹波交流有效值与直流平均值之比。不同指标的测试条件应保持一致。</p>
+<h4>10.3.1～10.3.3 三种整流不要混用U₂</h4><table><tr><th>电路（理想二极管、无滤波）</th><th>平均输出</th><th>每管最大反向电压</th><th>纹波基频</th></tr><tr><td>半波</td><td>0.45U₂</td><td>√2U₂</td><td>f</td></tr><tr><td>桥式全波</td><td>0.9U₂</td><td>√2U₂</td><td>2f</td></tr><tr><td>中心抽头全波</td><td>0.9U₂</td><td>2√2U₂</td><td>2f</td></tr></table><p>中心抽头这一行的U₂是<strong>每半段绕组</strong>的有效值；桥式是整个二次绕组的有效值。桥式每次两个二极管导通，中心抽头每次一个，考虑实际压降时相应扣除。</p>
+<h4>10.3.4 电容、电感与复合滤波</h4><p>电容并在负载两端：电压峰值附近充电，其他时间向负载放电；电感串联利用电流连续性抑制脉动。RC、LC或π型滤波继续削弱纹波，但带来压降、体积或功耗的代价。</p><div class="formula">小纹波、电容滤波近似：ΔU<sub>pp</sub>≈I<sub>L</sub>/(f<sub>ripple</sub>C)</div><p>半波电容滤波的二极管反向峰值可能接近2√2U₂，不能套用“无滤波半波”的耐压。桥式带载1.2U₂是特定RC范围的经验值，不是恒定公式；轻载时更接近峰值。</p>
+<h4>10.3.5 倍压整流</h4><p>利用不同半周为不同电容充电，再将电容电压串叠。理想空载倍压可得到约峰值的整数倍，但带载后电压下降、纹波增大。分析时逐半周画导通回路，标每个电容的正负极性，再按指定输出端求电压代数和；二极管耐压需要从截止半周单独计算。</p>
+<h4>10.4 串联反馈稳压的闭环过程</h4><p>输出下降→采样电压下降→比较放大器使调整管更导通→调整管压降减小→输出回升。实际极性应按电路验证。稳压范围还要求输入最低谷值高于输出与调整管所需压差之和。</p>
+<h4>10.5 三端稳压器的计算与发热</h4><div class="formula">可调稳压器常见连接（R₁在输出与调整端，R₂在调整端与地）：<br>U<sub>O</sub>=U<sub>REF</sub>(1+R₂/R₁)+I<sub>ADJ</sub>R₂<br>线性稳压器主要损耗近似 P≈(U<sub>I</sub>−U<sub>O</sub>)I<sub>O</sub></div><p>检查最小负载电流、输入输出压差、最大电流与散热。78XX/79XX的正负极性和引脚连接应按题图或器件资料，不能把正负稳压器按同一引脚顺序接线。</p>
+</div></details>
+</main><footer>模电学习手册 · 教材对照修订版 · 本仓库版本为知识讲义，未包含教材扫描页。串讲为学习辅助，公式请结合电路结构、单位和适用条件使用。</footer>
 <script>
 const chapters=[...document.querySelectorAll('.chapter')];
-document.getElementById('open-all').addEventListener('click',()=>chapters.forEach(x=>x.open=true));
-document.getElementById('close-all').addEventListener('click',()=>chapters.forEach(x=>x.open=false));
-function openHash(){const el=document.getElementById(location.hash.slice(1));if(el&&el.classList.contains('chapter'))el.open=true;}
-window.addEventListener('hashchange',openHash);openHash();
-document.querySelectorAll('#toc a').forEach(a=>a.addEventListener('click',()=>document.getElementById(a.hash.slice(1)).open=true));
-let printState=[];window.addEventListener('beforeprint',()=>{printState=[...document.querySelectorAll('details')].map(x=>[x,x.open]);printState.forEach(([x])=>x.open=true)});window.addEventListener('afterprint',()=>printState.forEach(([x,o])=>x.open=o));document.getElementById('print').addEventListener('click',()=>window.print());
-</script></body>
-</html>
+document.getElementById('open-all').onclick=()=>chapters.forEach(x=>x.open=true);
+document.getElementById('close-all').onclick=()=>chapters.forEach(x=>x.open=false);
+function openHash(){const el=document.getElementById(decodeURIComponent(location.hash.slice(1)));if(!el)return;let p=el;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement;}requestAnimationFrame(()=>el.scrollIntoView({block:'start'}));}
+window.addEventListener('hashchange',openHash);if(location.hash)openHash();
+function setPage(reader,n){const a=+reader.dataset.start,b=+reader.dataset.end;n=Math.min(b,Math.max(a,n));const src=`pages/p${n}.jpg`;reader.querySelector('select').value=n;reader.querySelector('img').src=src;reader.querySelector('img').alt=`教材第${n}页，点击查看高清原页`;reader.querySelectorAll('a').forEach(x=>x.href=src);reader.querySelector('.page-status').textContent=`第${n-a+1} / ${b-a+1}页 · 教材页码${n}`;reader.querySelector('[data-step="-1"]').disabled=n===a;reader.querySelector('[data-step="1"]').disabled=n===b;}
+document.querySelectorAll('.reader').forEach(r=>{setPage(r,+r.dataset.start);r.querySelector('select').onchange=e=>setPage(r,+e.target.value);r.querySelectorAll('[data-step]').forEach(b=>b.onclick=()=>setPage(r,+r.querySelector('select').value+Number(b.dataset.step)));});
+document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>{const r=b.closest('.exercise-section').querySelector('.reader');setPage(r,+b.dataset.page);r.scrollIntoView({block:'start',behavior:'smooth'});});
+let printState=[];window.addEventListener('beforeprint',()=>{printState=[...document.querySelectorAll('details')].map(x=>[x,x.open]);printState.forEach(([x])=>x.open=true)});window.addEventListener('afterprint',()=>printState.forEach(([x,o])=>x.open=o));document.getElementById('print').onclick=()=>window.print();
+</script></body></html>
