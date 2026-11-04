@@ -1,0 +1,145 @@
+{
+  "total_svg": 32,
+  "by_chapter": {
+    "10": 2,
+    "9": 3,
+    "8": 2,
+    "7": 3,
+    "6": 6,
+    "5": 2,
+    "4": 2,
+    "3": 2,
+    "2": 8,
+    "1": 2
+  },
+  "sections": [
+    {
+      "chapter": 1,
+      "heading": "1.4.3 二极管典型应用"
+    },
+    {
+      "chapter": 1,
+      "heading": "1.5 稳压范围：同时看轻载和重载"
+    },
+    {
+      "chapter": 2,
+      "heading": "2.4 分压式射极偏置电路（稳定静态工作点）"
+    },
+    {
+      "chapter": 2,
+      "heading": "2.4 分压式射极偏置电路（稳定静态工作点）"
+    },
+    {
+      "chapter": 2,
+      "heading": "2.4 分压式射极偏置电路（稳定静态工作点）"
+    },
+    {
+      "chapter": 2,
+      "heading": "2.4 射极电阻：稳定Q点，也可能减小交流增益"
+    },
+    {
+      "chapter": 2,
+      "heading": "2.5 共集电极放大电路（射极跟随器）"
+    },
+    {
+      "chapter": 2,
+      "heading": "2.6 共基极放大电路"
+    },
+    {
+      "chapter": 2,
+      "heading": "2.7.2 共集—共集：复合管/达林顿连接"
+    },
+    {
+      "chapter": 2,
+      "heading": "2.7.1 共射—共基：高增益与较宽带宽"
+    },
+    {
+      "chapter": 3,
+      "heading": "3.1 结型场效应管JFET"
+    },
+    {
+      "chapter": 3,
+      "heading": "3.3 场效应管放大电路"
+    },
+    {
+      "chapter": 4,
+      "heading": "4.1 RC单时间常数电路频率响应"
+    },
+    {
+      "chapter": 4,
+      "heading": "4.2 BJT高频混合π模型"
+    },
+    {
+      "chapter": 5,
+      "heading": "5.4 差分放大电路分析"
+    },
+    {
+      "chapter": 5,
+      "heading": "5.4.3～5.4.5 先定义差和共，再套增益"
+    },
+    {
+      "chapter": 6,
+      "heading": "2）同相比例运算电路"
+    },
+    {
+      "chapter": 6,
+      "heading": "3）加法运算电路（反相加法）"
+    },
+    {
+      "chapter": 6,
+      "heading": "4）减法运算电路（差分运算）"
+    },
+    {
+      "chapter": 6,
+      "heading": "5）积分运算电路"
+    },
+    {
+      "chapter": 6,
+      "heading": "6）微分运算电路"
+    },
+    {
+      "chapter": 6,
+      "heading": "6.4.1～6.4.2 迟滞门限的通用算法"
+    },
+    {
+      "chapter": 7,
+      "heading": "7.2 四种负反馈组态"
+    },
+    {
+      "chapter": 7,
+      "heading": "7.2～7.3 A和F的量纲要配对"
+    },
+    {
+      "chapter": 7,
+      "heading": "7.5 深度负反馈近似计算"
+    },
+    {
+      "chapter": 8,
+      "heading": "8.2 OCL乙类互补对称功放（双电源）"
+    },
+    {
+      "chapter": 8,
+      "heading": "8.3 单电源OTL的两个“输出电位”"
+    },
+    {
+      "chapter": 9,
+      "heading": "9.1 有源滤波电路"
+    },
+    {
+      "chapter": 9,
+      "heading": "9.2.2～9.2.3 文氏桥与RC移相"
+    },
+    {
+      "chapter": 9,
+      "heading": "9.3 方波：门限+指数充放电"
+    },
+    {
+      "chapter": 10,
+      "heading": "10.4-10.5 稳压电路"
+    },
+    {
+      "chapter": 10,
+      "heading": "10.5 三端稳压器的计算与发热"
+    }
+  ]
+}

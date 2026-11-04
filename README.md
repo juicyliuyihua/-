@@ -25,6 +25,8 @@
 
 [打开全部习题解析](https://analog-electronics-liu-study.dotingfrost2.chatgpt.site/solutions.html) · [第二章解析](https://analog-electronics-liu-study.dotingfrost2.chatgpt.site/solutions-2.html)
 
+章节讲解配图将原理电路与分析步骤放在同一知识点下，涵盖直流通路、交流等效电路、反馈路径与功放导通路径。图中符号与相邻公式对应；手机上可横向滑动宽图。`teaching-diagram-audit.json`列出配图的章节与插入位置。
+
 ## 使用
 
 保持本目录的全部文件及`pages/`相对位置不变，可直接用浏览器打开`index.html`，也可部署到静态站点。`solutions.html`为解析目录，`solutions-1.html`至`solutions-10.html`为分章解析，`solutions-all.html`为合订阅读及打印版。支持题号跳转、关键词搜索、逐题展开、原题查看和打印。`solution-audit.json`记录解析覆盖范围。
