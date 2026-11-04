@@ -1,0 +1,72 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第8章习题解析 · 模电学习手册</title><link rel="stylesheet" href="solutions.css"><script defer src="solutions.js"></script></head><body id="top"><header><div class="crumbs"><a href="index.html">知识串讲</a><span>/</span><a href="solutions.html">全书解析</a></div><p class="eyebrow">WORKED SOLUTIONS / CHAPTER 08</p><h1>第8章 · 功率放大电路</h1><p class="intro">8.1～8.9 · 9道编号习题 · 原题第179～182页<br>先看原题，再展开推导。数值结果请连同本题采用的模型与近似条件阅读。</p><div class="actions"><input type="search" data-search aria-label="查找解析" placeholder="按题号或关键词查找"><button data-expand>展开全部解析</button><button data-collapse>收起解析</button><button data-print>打印解析 / 存为PDF</button><button class="original-trigger" data-original>查看教材原题</button></div><nav class="question-nav" aria-label="本章题号"><a href="#solution-8-1">8.1</a><a href="#solution-8-2">8.2</a><a href="#solution-8-3">8.3</a><a href="#solution-8-4">8.4</a><a href="#solution-8-5">8.5</a><a href="#solution-8-6">8.6</a><a href="#solution-8-7">8.7</a><a href="#solution-8-8">8.8</a><a href="#solution-8-9">8.9</a></nav></header><main><p id="nothing" hidden>没有匹配的解析，请换一个题号或关键词。</p><section data-solution-chapter="8">
+<h3>第8章逐题解析：功率、效率、管耗与偏置</h3>
+<p>本章数值题均按正弦输出计算：U<sub>om</sub>为峰值，U<sub>o,rms</sub>=U<sub>om</sub>/√2，P<sub>o</sub>=U<sub>om</sub>²/(2R<sub>L</sub>)。理想乙类或忽略静态功耗的甲乙类OCL，P<sub>V</sub>=2V<sub>CC</sub>U<sub>om</sub>/(πR<sub>L</sub>)；单管平均管耗P<sub>T1</sub>=V<sub>CC</sub>U<sub>om</sub>/(πR<sub>L</sub>)−U<sub>om</sub>²/(4R<sub>L</sub>)。下面明确区分“最大输出时的管耗”与“所有输出幅度中的最大管耗”。</p>
+
+<details class="solution" id="solution-8-1"><summary>8.1 十二项判断及教材表述中的条件</summary><div>
+<p><a href="pages/p179.jpg" target="_blank" rel="noopener">原题：179页</a></p>
+<ol>
+<li><strong>×。</strong>功率放大级可以是射极跟随器，电压增益略小于1，但电流增益较大，仍能提供功率增益；不是所有功放都有电压放大作用。</li>
+<li><strong>×。</strong>“电压放大”和“功率放大”强调的设计目标不同，不表示某电路只能放大一种量。负载功率同时取决于输出电压和电流。</li>
+<li><strong>√（针对大信号功率计算）。</strong>晶体管在大范围内变化，小信号线性化不能覆盖整个周期，需使用分段导通模型或大信号特性。它仍可用于局部小扰动分析，但不能据此直接算最大输出功率。</li>
+<li><strong>√（本章常规甲类电路）。</strong>无信号时无交流输出，直流电源仍提供静态功率；有信号后，一部分能量送往负载，晶体管平均管耗下降，因此静态管耗最大。</li>
+<li><strong>√（理想乙类）。</strong>静态电流为零，P<sub>o</sub>=0时功率管电流近似零，管耗也近似零。甲乙类存在静态电流，不能套用此结论。</li>
+<li><strong>√。</strong>功放主要研究P<sub>o</sub>、P<sub>V</sub>、管耗和效率，并同时检查失真与器件极限。</li>
+<li><strong>×。</strong>乙类单管管耗随输出幅值呈开口向下的二次函数，最大值出现在U<sub>om</sub>=2V<sub>CC</sub>/π，而不是最大输出处。</li>
+<li><strong>题干需补条件。</strong>严格定义是η=P<sub>o</sub>/P<sub>V</sub>，分子、分母必须来自同一个工作状态。只有讨论最大输出工作点的效率时，才能写η=P<sub>om</sub>/P<sub>V</sub>|<sub>Pom</sub>。书后将本项判√，可按这一限定理解；不能把任意状态的P<sub>V</sub>与最大P<sub>om</sub>混算。教材173页正文给出的也是“输出功率与电源供给功率之比”。</li>
+<li><strong>√（实际电路）。</strong>真实功放有导通、驱动等损耗，转换效率小于100%。本章线性乙类的理想极限也只有π/4≈78.5%。</li>
+<li><strong>√。</strong>应同时满足最大集电极电流I<sub>CM</sub>、耐压U<sub>(BR)CEO</sub>与允许耗散功率P<sub>CM</sub>；只查其中一项不够。</li>
+<li><strong>不能脱离模型作一般判断。</strong>书后给×，作为对任意功放的无条件断言可以认为条件不足；但对本章固定V<sub>CC</sub>、R<sub>L</sub>、忽略静态功耗的乙类模型，η=πU<sub>om</sub>/(4V<sub>CC</sub>)随幅值单调增加，所以<strong>最大不失真正弦输出时确实达到该模型的最高效率</strong>。应保留这一数学结论，不应为了匹配“×”而反向解释公式。</li>
+<li><strong>×。</strong>只给“单电源且电压相等”不足以比较最大输出功率，还需要负载阻值、耦合方式、静态点与允许摆幅。甲乙类区别首先决定导通角、静态损耗和效率，不自动决定谁的最大功率更小。</li>
+</ol>
+</div></details>
+
+<details class="solution" id="solution-8-2"><summary>8.2 导通角、功放特点与效率选择题</summary><div>
+<p><a href="pages/p179.jpg" target="_blank" rel="noopener">题目1～6：179页</a> · <a href="pages/p180.jpg" target="_blank" rel="noopener">续题6、7：180页</a></p>
+<ol><li><strong>a，2π。</strong>甲类每只管在整个信号周期内导通。</li><li><strong>b，&gt;π。</strong>甲乙类每管导通角介于π与2π之间，两管在过零附近有一小段同时导通区。</li><li><strong>b，=π。</strong>理想乙类每只管负责半个周期。</li><li><strong>c，较大的输出功率。</strong>功放不一定有很高的电压增益；其目标是把足够功率送到负载。</li><li><strong>a，最大交流功率。</strong>负载上希望得到的是有效信号交流功率，常以最大不失真正弦输出功率衡量。</li><li><strong>c，输出功率/电源提供功率。</strong>分母不是信号输入功率，也不是功率管自身耗散功率。</li><li><strong>①a；②b；③c。</strong>同类比较条件下，甲类的静态损耗最大；给乙类引入小静态偏置、转为甲乙类，可减小或消除交越失真；三类中乙类导通角最小，为π。甲类本来就没有乙类过零死区，这里②按“对乙类交越失真的改进方式”选甲乙类。</li></ol>
+</div></details>
+
+<details class="solution" id="solution-8-3"><summary>8.3 OTL与OCL：工作电位、导通管和输出功率比较</summary><div>
+<p><a href="pages/p180.jpg" target="_blank" rel="noopener">原题与图8.3：180页</a></p>
+<ol><li><strong>(a)为OTL，(b)为OCL。</strong>(a)单电源，负载前有输出隔直电容C；(b)使用±V<sub>CC</sub>双电源，输出直接耦合到负载。</li><li><strong>OCL。</strong>对称OCL输出静态为0，故两管公共发射极电位为0；OTL公共发射极应偏置在V<sub>CC</sub>/2，电容将此直流分量隔开，使负载端直流为0。</li><li><strong>两图正半周均为上管T₁导通。</strong>正向输出需要由正电源经过NPN管T₁向负载提供电流；负半周由下管T₂承担。OTL的“正半周”指相对V<sub>CC</sub>/2静态点的正向交流变化。书后本小问写“OCL”与题目所问“晶体管”不符，应视为排印/答案错位，不能填进管号空格。</li><li><strong>OCL最大输出功率更大。</strong>令饱和压降幅值为U<sub>S</sub>，OTL峰值约V<sub>CC</sub>/2−U<sub>S</sub>，OCL峰值约V<sub>CC</sub>−U<sub>S</sub>。故P<sub>om,OTL</sub>≈(V<sub>CC</sub>/2−U<sub>S</sub>)²/(2R<sub>L</sub>)，P<sub>om,OCL</sub>≈(V<sub>CC</sub>−U<sub>S</sub>)²/(2R<sub>L</sub>)。忽略饱和压降时，后者是前者的4倍。这里“OCL的V<sub>CC</sub>”是每一侧电源幅值，因此它的总电源跨度也是OTL的两倍。</li></ol>
+</div></details>
+
+<details class="solution" id="solution-8-4"><summary>8.4 ±12V、16Ω OCL的功率与选管</summary><div>
+<p><a href="pages/p180.jpg" target="_blank" rel="noopener">原题与图8.4：180页</a></p>
+<p>题设忽略饱和压降，因此最大正弦输出峰值U<sub>om,max</sub>=V<sub>CC</sub>=12V。</p>
+<ol><li><strong>最大输出功率：</strong>P<sub>om</sub>=12²/(2×16)=<strong>4.5W</strong>。12V是峰值，不应直接用12²/16。</li><li><strong>每管允许耗散功率：</strong>由P<sub>T1</sub>=V<sub>CC</sub>U<sub>om</sub>/(πR<sub>L</sub>)−U<sub>om</sub>²/(4R<sub>L</sub>)，求导得最大管耗出现在U<sub>om</sub>=2V<sub>CC</sub>/π=7.64V。代回得P<sub>T1,max</sub>=V<sub>CC</sub>²/(π²R<sub>L</sub>)=144/(π²×16)=<strong>0.912W</strong>。所以每管P<sub>CM</sub>至少应覆盖0.912W，并考虑温升降额与裕量；书后0.9W是0.2P<sub>om</sub>的粗略取值。</li><li><strong>耐压：</strong>一管截止时，另一管可把输出推到相反电源端，截止管承受约2V<sub>CC</sub>=<strong>24V</strong>。故理论至少24V，实际额定耐压应留有裕量。</li></ol>
+</div></details>
+
+<details class="solution" id="solution-8-5"><summary>8.5 甲乙类OCL的电源选择与偏置调整</summary><div>
+<p><a href="pages/p180.jpg" target="_blank" rel="noopener">题干前半：180页</a> · <a href="pages/p181.jpg" target="_blank" rel="noopener">题干续页与图8.5：181页</a></p>
+<ol><li><strong>甲乙类。</strong>D₁、D₂及R₁在两管基极间建立适当偏置，使无信号时两管略微导通，减小过零死区。</li><li><strong>V<sub>CC</sub>至少17V。</strong>由要求P<sub>om</sub>=8W、R<sub>L</sub>=16Ω，先求所需峰值U<sub>om</sub>=√(2P<sub>om</sub>R<sub>L</sub>)=√256=16V。再计入每管饱和压降约1V：V<sub>CC,min</sub>=16+1=<strong>17V</strong>，即采用约±17V或更高且满足器件限值的电源。</li><li><strong>适当调大R₁的有效阻值。</strong>两基极间偏置近似为U<sub>D1</sub>+U<sub>D2</sub>+I<sub>偏置</sub>R₁。R₁增大使基极间电压增大，提高静态导通程度，从而减轻交越失真。调得过大会增加静态管耗，因此应边监测静态电流边调整。</li><li><strong>适当调大R₃的有效阻值。</strong>R₃位于+V<sub>CC</sub>与上管基极B₁之间。增大R₃，使B₁及整个偏置链电位降低，公共射极A的静态电位随之下降，可把u<sub>o</sub>&gt;0调回0。R₁主要影响两基极间压差，R₃主要调整中心电位，实际两者有耦合，需复查静态电流与零点。</li></ol>
+</div></details>
+
+<details class="solution" id="solution-8-6"><summary>8.6 ±24V、20Ω、饱和压降2V的OCL</summary><div>
+<p><a href="pages/p181.jpg" target="_blank" rel="noopener">原题与图8.6：181页</a></p>
+<p>按题图V<sub>CC</sub>=24V，R<sub>L</sub>=20Ω，U<sub>CE(sat)</sub>≈2V；按本章工程模型忽略小静态功耗与基极驱动功耗。</p>
+<ol><li><strong>最大输出功率：</strong>U<sub>om,max</sub>=24−2=22V，P<sub>om</sub>=22²/(2×20)=<strong>12.1W</strong>。</li><li><strong>最大输出工作点的效率：</strong>P<sub>V</sub>=2×24×22/(π×20)=16.807W，η=P<sub>om</sub>/P<sub>V</sub>=12.1/16.807=<strong>72.0%</strong>。有饱和压降时，不能直接填78.5%。</li><li><strong>每只晶体管的最大允许管耗：</strong>P<sub>T1,max</sub>=24²/(π²×20)=<strong>2.918W</strong>，其发生幅值2×24/π≈15.28V，低于22V，故这个最大值确实能在本题允许范围内出现。理论至少2.92W，按教材取<strong>不小于3W</strong>，实际还需热设计裕量。</li></ol><p>核对：在22V最大输出处，两管总管耗只有16.807−12.1=4.707W，每管约2.353W；若只按这个点选管，会漏掉中等输出幅度处每管2.918W的最大发热。</p>
+</div></details>
+
+<details class="solution" id="solution-8-7"><summary>8.7 12V单电源OTL：调试、断路故障与功率复核</summary><div>
+<p><a href="pages/p181.jpg" target="_blank" rel="noopener">原题与图8.7：181页</a></p>
+<h4>1）输出电容的静态电压与先调哪个电阻</h4><p>无信号时，公共射极应位于电源中点6V；负载端经R<sub>L</sub>接地、直流为0，所以<strong>U<sub>CL,Q</sub>=12/2=6V</strong>，左端为正。中心电位偏离6V时，先调<strong>R<sub>P1</sub></strong>：射极电位过高则增大R<sub>P1</sub>，过低则减小。题目没有给偏高还是偏低，不能一律回答“调大”。</p>
+<h4>2）R<sub>P2</sub>或二极管断路是否安全</h4><p><strong>不安全，会使两功率管同时过度导通，可能烧毁。</strong>断路使连接两基极的偏置链失效，上管基极被R<sub>P1</sub>拉向+12V，下管基极被R拉向地，形成从+12V经T₁、T₂到地的直通电流，输出隔直电容不能切断这条直通路径。</p><p>用硅管U<sub>BE</sub>≈0.7V估计、R<sub>P1</sub>=R=1.2kΩ、β=50，对称条件下公共射极仍约6V：</p><div class="formula">I<sub>B1</sub>≈I<sub>B2</sub>≈(6−0.7)/1.2kΩ=4.42mA<br>I<sub>C</sub>≈50×4.42mA=0.221A<br>P<sub>C,每管</sub>≈6V×0.221A=1.33W &gt; P<sub>CM</sub>=0.20W。</div><p>即使近似参数变化，这一耗散仍明显超过题给额定值，故故障结论不依赖精确的0.7V取值。</p>
+<h4>3）主要用哪个电阻调静态工作电流</h4><p>应主要调<strong>R<sub>P2</sub></strong>。它与D₃、D₄串联，直接改变两管基极间偏置电压：U<sub>B1B2</sub>≈U<sub>D3</sub>+U<sub>D4</sub>+I<sub>偏置</sub>R<sub>P2</sub>。适当增大R<sub>P2</sub>会增大基极间压差和静态导通电流；R<sub>P1</sub>主要用于调整中心电位。书后此处写R<sub>P1</sub>，与题图元件位置及教材178页OTL偏置说明不一致，故本解析按电路功能校正为R<sub>P2</sub>，调整后仍需复查中点电压。</p>
+<h4>4）最大输出时的四个功率指标</h4><p>忽略饱和压降，单电源12V的OTL最大交流峰值只能到6V，而不是12V。按静态电流可忽略的本章近似：</p><div class="formula">U<sub>om,max</sub>=6V，I<sub>om</sub>=6/16=0.375A<br>P<sub>o,max</sub>=6²/(2×16)=<strong>1.125W</strong><br>P<sub>V</sub>=12×I<sub>om</sub>/π=12×0.375/π=<strong>1.432W</strong><br>P<sub>T,两管合计</sub>=P<sub>V</sub>−P<sub>o</sub>=<strong>0.307W</strong>（每管约0.154W）<br>η=1.125/1.432=<strong>78.5%</strong>。</div>
+<p>书后列2.25W、2.87W、0.62W，三项均约为上述结果的两倍；根据题图12V单电源、16Ω负载和教材178页“以V<sub>CC</sub>/2替代OCL每侧电源”的规定，应以上述复算为准。甲乙类若保留实际静态电流，电源功耗会更大，效率会略低。</p><p>补充选管检查：正常工作时的单管最大平均管耗并不出现在最大输出处，而为6²/(π²×16)=0.228W，仍高于题给0.20W。因此这组器件若要求在所有正弦输出幅度下可靠运行，允许耗散也偏小；不能仅凭最大输出处每管0.154W就认为始终安全。</p>
+</div></details>
+
+<details class="solution" id="solution-8-8"><summary>8.8 差分输入与复合管互补功率级</summary><div>
+<p><a href="pages/p181.jpg" target="_blank" rel="noopener">题干：181页</a> · <a href="pages/p182.jpg" target="_blank" rel="noopener">图8.8：182页</a></p>
+<ol><li><strong>按功能分为两级。</strong>第一级是T₁、T₂构成的差分电压放大级：输入加在T₁，T₂另一输入端经R₂接地，差分对提供电压增益；第二级是由两组复合管组成的互补对称<strong>OCL功率输出级</strong>。输出直接接负载，使用±V<sub>CC</sub>电源。</li><li><strong>T₃、T₄等效为NPN复合管；T₅、T₆等效为PNP复合管。</strong>前一管提供后管的基极驱动，使等效电流增益显著增大。上组负责向负载提供正向电流，下组负责负向电流。</li><li><strong>R₆、D₁、D₂共同提供输出级基极间偏置，减小交越失真。</strong>适当偏置使复合功率管在过零附近仍略微导通，形成甲乙类工作。复合管有多个发射结，所需总偏置不能简单当作单个U<sub>BE</sub>；二极管提供结压降及一定温度跟踪，R₆参与设定剩余偏置压降和静态电流。偏置过大会增加直通电流与静态发热。</li></ol>
+</div></details>
+
+<details class="solution" id="solution-8-9"><summary>8.9 运放驱动的±18V、4Ω OCL及反馈电阻设计</summary><div>
+<p><a href="pages/p181.jpg" target="_blank" rel="noopener">题干前半：181页</a> · <a href="pages/p182.jpg" target="_blank" rel="noopener">图8.9与续问：182页</a></p>
+<h4>1）二极管作用</h4><p>D₁、D₂在上下管基极之间建立适当偏置，让两管在零点附近有小静态电流，<strong>减小或消除交越失真</strong>，并可提供一定的结压降温度跟踪。题设允许忽略这部分静态功耗。</p>
+<h4>2）最大输出功率和效率</h4><div class="formula">U<sub>om,max</sub>=18−2=16V<br>P<sub>om</sub>=16²/(2×4)=<strong>32W</strong><br>P<sub>V</sub>=2×18×16/(π×4)=45.837W<br>η=32/45.837=<strong>69.8%</strong>。</div><p>两管总耗散在这一输出点为45.837−32=13.837W，每管约6.918W。</p>
+<h4>3）三个极限参数</h4><ul><li><strong>电流：</strong>I<sub>CM</sub>至少覆盖I<sub>C,peak</sub>≈16/4=<strong>4A</strong>。</li><li><strong>耐压：</strong>输出达到−16V时，上管截止，承受18−(−16)=<strong>34V</strong>；另一半周下管相同。所以按题给最大摆幅，|U<sub>(BR)CEO</sub>|至少34V。实际选型还应为电源波动、异常摆幅等留裕量，不把34V当作推荐器件的精确额定值。</li><li><strong>每管允许耗散：</strong>最大平均管耗发生在U<sub>om</sub>=2×18/π=11.46V，处于允许的0～16V范围内。P<sub>T1,max</sub>=18²/(π²×4)=<strong>8.207W</strong>，故每管P<sub>CM</sub>至少覆盖约8.21W。书后8.1W来自P<sub>T1,max</sub>≈0.2×[18²/(2×4)]的粗略近似；若严格按“至少”，应使用8.21W并留散热裕量，而不能按最大输出时的6.918W选取。</li></ul>
+<h4>4）反馈类型与R₄最小值</h4><p>负载电压经R₄和反相端的R₁分压返回运放反相端；同相端接输入。输出升高会抬高反相端电位、减小差模输入，因此是<strong>电压串联负反馈</strong>。理想运放输入不取电流，所以同相端串联R₁无信号压降。</p><div class="formula">A<sub>uf</sub>=1+R₄/R₁，R₁=2kΩ<br>需要的输出有效值 U<sub>o,rms,max</sub>=16/√2=11.314V<br>输入最大有效值1V，故1+R₄/(2kΩ)≥11.314<br><strong>R₄≥20.627kΩ，约20.6kΩ</strong>。</div><p>若按实际标准阻值且要求在输入不超过1V有效值时能够达到该摆幅，可选略大于20.63kΩ的值，同时避免输入继续增加导致削顶。最小值计算不能把输入有效值1V直接与输出峰值16V作比。</p>
+</div></details>
+</section>
+</main><footer>依据上传教材逐题推导。原题、书后参考答案与本解析分开呈现；涉及近似、题面缺项或疑似勘误时，在对应题中注明。<br><a href="solutions.html">解析目录</a> · <a href="index.html">返回知识串讲</a></footer><dialog id="original-dialog" aria-label="教材原题"><div class="original-tools"><button data-prev type="button">上一页</button><select aria-label="选择教材原题页"><option value="179">教材第179页</option><option value="180">教材第180页</option><option value="181">教材第181页</option><option value="182">教材第182页</option></select><button data-next type="button">下一页</button><a class="full-original" href="pages/p179.jpg" target="_blank" rel="noopener">打开高清页 ↗</a><button type="button" class="close">关闭原题</button></div><p class="original-status" aria-live="polite"></p><img class="original-image" alt="教材原题" decoding="async"></dialog><a class="page-top" href="#top">回到顶部 ↑</a></body></html>

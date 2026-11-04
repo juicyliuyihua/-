@@ -1,0 +1,60 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第7章习题解析 · 模电学习手册</title><link rel="stylesheet" href="solutions.css"><script defer src="solutions.js"></script></head><body id="top"><header><div class="crumbs"><a href="index.html">知识串讲</a><span>/</span><a href="solutions.html">全书解析</a></div><p class="eyebrow">WORKED SOLUTIONS / CHAPTER 07</p><h1>第7章 · 反馈放大电路</h1><p class="intro">7.1～7.8 · 8道编号习题 · 原题第170～172页<br>先看原题，再展开推导。数值结果请连同本题采用的模型与近似条件阅读。</p><div class="actions"><input type="search" data-search aria-label="查找解析" placeholder="按题号或关键词查找"><button data-expand>展开全部解析</button><button data-collapse>收起解析</button><button data-print>打印解析 / 存为PDF</button><button class="original-trigger" data-original>查看教材原题</button></div><nav class="question-nav" aria-label="本章题号"><a href="#solution-7-1">7.1</a><a href="#solution-7-2">7.2</a><a href="#solution-7-3">7.3</a><a href="#solution-7-4">7.4</a><a href="#solution-7-5">7.5</a><a href="#solution-7-6">7.6</a><a href="#solution-7-7">7.7</a><a href="#solution-7-8">7.8</a></nav></header><main><p id="nothing" hidden>没有匹配的解析，请换一个题号或关键词。</p><section data-solution-chapter="7">
+<h3>第7章逐题解析：反馈判断与深度负反馈</h3>
+<p>以下“＋、－”表示相对静态值的瞬时增量，不是直流电位正负。直流分析令电容开路；题设中频交流分析令电容短路、直流电源交流接地。判断负反馈要看反馈是否削弱净输入，不能只看输出与输入同相还是反相。</p>
+
+<details class="solution" id="solution-7-1"><summary>7.1 电容改变反馈通路：两图均有直流负反馈、无交流反馈</summary><div>
+<p><a href="pages/p170.jpg" target="_blank" rel="noopener">原题与图7.1：教材170页</a></p>
+<h4>图(a)</h4><p>直流时C开路，输出经R₂、R₁分压返回反相端：u<sub>f</sub>=u<sub>−</sub>=R₁u<sub>o</sub>/(R₁+R₂)。假设输出电位升高，反相端电位随之升高，净输入u<sub>+</sub>−u<sub>−</sub>减小，抑制原来的输出升高，所以是<strong>直流负反馈</strong>。</p>
+<p>交流时C把反相端直接接到交流地，u<sub>−</sub>=0；输出虽经R₂流过电流，但不能在反相端产生反馈电压。因此<strong>没有交流反馈</strong>。此时R₂相当于交流输出负载的一部分，不能仅凭“输出还连着电阻”就判定存在反馈。</p>
+<h4>图(b)</h4><p>直流时C开路，输出通过R₃、R₂串联返回反相输入节点。若输入为正增量，运放输出趋向负增量，返回反相端的电流削弱原来的输入电流，因此是<strong>直流负反馈</strong>。在线性理想模型下直流闭环增益为−(R₂+R₃)/R₁。</p>
+<p>交流时C把R₂、R₃的中点短接到地：R₃变成输出对地电阻，R₂变成反相端对地电阻，输出变化被交流地隔断，故<strong>没有交流反馈</strong>。没有交流负反馈时，不能再用“虚短”求交流线性增益。</p>
+</div></details>
+
+<details class="solution" id="solution-7-2"><summary>7.2 两种运放电路的反馈信号与瞬时极性</summary><div>
+<p><a href="pages/p170.jpg" target="_blank" rel="noopener">原题与图7.2：教材170页</a></p>
+<h4>图(a)</h4><p>交流时输入耦合电容短路。标记同相端u<sub>+</sub>为“＋”→输出u<sub>o</sub>为“＋”→经R₃、R₁分压的反相端为“＋”。反馈使净输入u<sub>d</sub>=u<sub>i</sub>−u<sub>f</sub>变小，是<strong>负反馈</strong>，反馈信号是电压：</p>
+<div class="formula">u<sub>f</sub>=R₁u<sub>o</sub>/(R₁+R₃)，A<sub>uf</sub>≈1+R₃/R₁。</div><p>R₂提供同相端直流通路；它不是从输出返回的反馈元件。</p>
+<h4>图(b)</h4><p>交流时电容短接R₂，输出直接接反相端。u<sub>i</sub>“＋”→u<sub>o</sub>“＋”→u<sub>−</sub>“＋”，仍削弱净输入，故为<strong>负反馈</strong>。此时u<sub>f</sub>=u<sub>o</sub>，反馈系数为1，理想交流增益约为1，是电压跟随关系。直流时C开路，仍有R₂、R₁构成的负反馈，直流增益约1+R₂/R₁。</p>
+</div></details>
+
+<details class="solution" id="solution-7-3"><summary>7.3 区分局部反馈与跨两级的反馈</summary><div>
+<p><a href="pages/p170.jpg" target="_blank" rel="noopener">题干：170页</a> · <a href="pages/p171.jpg" target="_blank" rel="noopener">图7.3：171页</a></p>
+<h4>图(a)：级间电流并联负反馈</h4><p>A₂的R₃从输出接回反相端，构成A₂本级的电压并联负反馈。跨两级的通路则通过负载R<sub>L</sub>返回A₁同相输入节点。设该节点为x，A₁输出为v₁，A₂输出为v₂，题图负载电流i<sub>o</sub>方向自上向下。</p>
+<p>瞬时极性沿前向通路为：x“＋”→v₁“＋”→v₂“－”。v₂降低会增大从x经R<sub>L</sub>向下流出的电流，把输入节点电流分流走，减小净输入，所以是负反馈。标反馈电流i<sub>f</sub>沿<strong>x→R<sub>L</sub>→A₂输出</strong>，则i<sub>f</sub>=i<sub>o</sub>，输入节点满足i<sub>净</sub>=i<sub>i</sub>−i<sub>f</sub>。</p>
+<p>反馈采样的是负载电流，输入端以电流相减，故为<strong>电流并联负反馈</strong>。作检验：深反馈时x≈0，i<sub>o</sub>≈u<sub>i</sub>/R₁；输出电流主要由输入和R₁决定，而不是由R<sub>L</sub>决定。</p>
+<h4>图(b)：级间电压串联负反馈</h4><p>A₂通过R₄构成本级反相负反馈。跨级反馈由输出经R₂、R₁分压返回A₁的同相端，u<sub>f</sub>=R₁u<sub>o</sub>/(R₁+R₂)。瞬时极性为：输入u<sub>i</sub>“＋”（接A₁负端）→A₁输出“－”→A₂输出“＋”→A₁正端反馈电压“＋”。反馈抵消了输入造成的负向差模电压，是<strong>电压串联负反馈</strong>。深反馈时u<sub>f</sub>≈u<sub>i</sub>，总增益约1+R₂/R₁。</p>
+</div></details>
+
+<details class="solution" id="solution-7-4"><summary>7.4 PNP复合放大与负载电流取样</summary><div>
+<p><a href="pages/p170.jpg" target="_blank" rel="noopener">题干：170页</a> · <a href="pages/p171.jpg" target="_blank" rel="noopener">图7.4：171页</a></p>
+<h4>图(a)：电压串联负反馈</h4><p>运放输出驱动PNP管基极，输出取PNP集电极。标u<sub>i</sub>“＋”→运放输出/管基极“－”→PNP集电极u<sub>o</sub>“＋”→运放同相端“＋”。同相端的返回增量抵消输入在反相端造成的差值，故为负反馈。</p><div class="formula">x<sub>f</sub>=u<sub>f</sub>=R₁u<sub>o</sub>/(R₁+R₂)。</div><p>输出电压分压取样，输入以两端电压作差，故是<strong>级间电压串联负反馈</strong>。R₃处在PNP发射极通路，还起到局部稳定电流的作用；题目要求的跨级组态由R₂、R₁通路判断。</p>
+<h4>图(b)：电流串联负反馈</h4><p>R₂和R₅分别构成两只运放本级的反相负反馈。跨级反馈来自负载R<sub>L</sub>下端的R₆：负载电流i<sub>o</sub>向下流过R₆，产生u<sub>f</sub>≈i<sub>o</sub>R₆，返回A₁同相端；理想运放输入不分流。</p><p>瞬时极性为：u<sub>i</sub>“＋”→A₁输出“－”→A₂输出“＋”→i<sub>o</sub>增加→R₆上端“＋”→A₁同相端“＋”，抵消原来的输入作用。反馈检测输出电流，且以电压形式串联比较，故为<strong>级间电流串联负反馈</strong>，x<sub>f</sub>=u<sub>f</sub>≈i<sub>o</sub>R₆。这里的u<sub>o</sub>是R<sub>L</sub>两端电压，不是A₂输出端相对地的电压，二者相差R₆上的电压。</p>
+</div></details>
+
+<details class="solution" id="solution-7-5"><summary>7.5 分立晶体管中的电流反馈</summary><div>
+<p><a href="pages/p170.jpg" target="_blank" rel="noopener">题干：170页</a> · <a href="pages/p171.jpg" target="_blank" rel="noopener">图7.5：171页</a></p>
+<h4>图(a)：电流并联负反馈</h4><p>T₁为共基输入，输入加在发射极，T₂为射极输出。u<sub>i</sub>“＋”→T₁集电极/T₂基极“＋”→T₂发射极输出“＋”。T₂电流增大使R₂上的压降增大，因而T₂集电极为“－”。该负增量通过R₁返回输入节点。</p><p>把反馈电流i<sub>f</sub>画为<strong>输入节点→R₁→T₂集电极</strong>，则i<sub>f</sub>=(v<sub>e1</sub>−v<sub>c2</sub>)/R₁；v<sub>c2</sub>降低时，分流增大，净输入电流减小，所以是负反馈。R₂通过T₂集电极电流取得反馈信息，输入端又作电流叠加，故为<strong>级间电流并联负反馈</strong>，反馈量x<sub>f</sub>=i<sub>f</sub>。不要因为负载接在发射极、反馈接在集电极，就把这一通路误看成直接输出电压分压。</p>
+<h4>图(b)：交流级间电流串联负反馈</h4><p>中频时C₂把R₃、R₇的连接点接到交流地，切断了这一路的交流反馈；C₃旁路T₂射极电阻R₆。仍起作用的跨级通路是<strong>T₃发射极→R₄→T₁发射极</strong>。</p><p>标T₁基极“＋”→T₁集电极/T₂基极“－”→T₂集电极/T₃基极“＋”→T₃集电极输出“－”；同时T₃发射极为“＋”，经R₄使T₁发射极也为“＋”，减小T₁的u<sub>be1</sub>，所以是负反馈。</p><p>在T₁发射极标反馈电压u<sub>f</sub>，参考方向为发射极对地。它由T₃发射极电流在R₉及反馈网络中引起，并不是直接取T₃集电极输出电压的分压，故为<strong>电流串联负反馈</strong>。若暂忽略T₁射极电流对反馈网络的加载，则u<sub>f</sub>≈[R₂/(R₂+R₄)]v<sub>e3</sub>；实际分析保留加载。</p><p>补充直流辨析：C₂开路后，R₇、R₃又构成从T₃集电极返回T₁基极的直流负反馈通路；这与题目通常考查的中频R₄通路应分开。T₁的R₂、T₂的R₆、T₃的R₉还分别参与局部直流稳定。</p>
+</div></details>
+
+<details class="solution" id="solution-7-6"><summary>7.6 反馈组态、输入输出电阻及闭环增益</summary><div>
+<p><a href="pages/p171.jpg" target="_blank" rel="noopener">图7.6：171页</a> · <a href="pages/p172.jpg" target="_blank" rel="noopener">四个小问：172页</a></p>
+<h4>图(a)</h4><ol><li><strong>极性与反馈信号：</strong>u<sub>i</sub>“＋”→运放输出/T基极“＋”→射极u<sub>o</sub>“＋”→反相端u<sub>f</sub>“＋”，因此u<sub>d</sub>=u<sub>i</sub>−u<sub>f</sub>减小。u<sub>f</sub>=R₁u<sub>o</sub>/(R₁+R₂)。</li><li><strong>组态：</strong>输出电压取样，输入电压串联比较，是电压串联负反馈；射极输出管包含在环路内。</li><li><strong>电阻：</strong>串联混合使输入电阻增大，电压取样使输出电阻减小。R₃为输出负载，不是反馈分压的下臂。</li><li><strong>深反馈计算：</strong>u<sub>i</sub>≈u<sub>f</sub>，故A<sub>uf</sub>≈(R₁+R₂)/R₁=(1k+10k)/1k=<strong>11</strong>，同相。此结果要求运放与T均未进入输出限幅，且反馈环路有足够增益。</li></ol>
+<h4>图(b)</h4><p>先认清朝左画的A₂：其输出在左侧，反相端与自身输出相连，同相端接u<sub>o</sub>，所以它是电压跟随器，左侧输出v<sub>f</sub>≈u<sub>o</sub>。</p><ol><li><strong>极性与反馈量：</strong>u<sub>i</sub>“＋”→A₁输出u<sub>o</sub>“－”→A₂输出v<sub>f</sub>“－”。反馈通过R₃从A₁反相输入节点吸走电流，抵消原输入；反馈信号为电流。若把从A₂输出流向求和节点定义为正，则i<sub>f,in</sub>=(v<sub>f</sub>−v<sub>−1</sub>)/R₃，为负增量。</li><li><strong>组态：</strong>电压并联负反馈。A₂自身另有局部电压串联负反馈。</li><li><strong>电阻：</strong>输入端并联混合使混合节点看入电阻减小，计入R₁后信号源所见输入电阻近似R₁；输出电阻减小。</li><li><strong>深反馈计算：</strong>A₁正端经R₂接地且不取电流，故v<sub>+</sub>=0、v<sub>−</sub>≈0。列输入节点KCL：u<sub>i</sub>/R₁+v<sub>f</sub>/R₃≈0，再用v<sub>f</sub>≈u<sub>o</sub>，得到<strong>A<sub>uf</sub>≈−R₃/R₁</strong>。题未给R₁、R₃数值，应保留此表达式。</li></ol>
+</div></details>
+
+<details class="solution" id="solution-7-7"><summary>7.7 共射并联反馈与差分输入串联反馈</summary><div>
+<p><a href="pages/p172.jpg" target="_blank" rel="noopener">原题与图7.7：172页</a></p>
+<h4>图(a)</h4><ol><li><strong>极性和反馈量：</strong>基极输入“＋”→共射集电极输出“－”。R<sub>f</sub>把输出变化返回基极。取反馈电流从基极节点经R<sub>f</sub>流向集电极为正：i<sub>f</sub>=(u<sub>i</sub>−u<sub>o</sub>)/R<sub>f</sub>；输出降低使该分流增大，净基极电流减小，故为负反馈。</li><li><strong>组态：</strong>电压并联负反馈。直流时反馈电阻仍相连，也能稳定静态工作点；此处计算中频交流。</li><li><strong>电阻：</strong>反馈放大器输入电阻减小，输出电阻减小。信号源内阻R<sub>s</sub>不属于反馈放大器自身的输入电阻。</li><li><strong>深反馈计算：</strong>求和节点交流电压u<sub>i</sub>≈0，基极净输入电流可忽略，故(u<sub>s</sub>−u<sub>i</sub>)/R<sub>s</sub>≈(u<sub>i</sub>−u<sub>o</sub>)/R<sub>f</sub>。于是<strong>A<sub>usf</sub>=u<sub>o</sub>/u<sub>s</sub>≈−R<sub>f</sub>/R<sub>s</sub></strong>。注意题图把u<sub>i</sub>标在R<sub>s</sub>之后；这个比值不是u<sub>o</sub>/u<sub>i</sub>。</li></ol>
+<h4>图(b)</h4><ol><li><strong>极性和反馈量：</strong>T₁基极“＋”→T₁集电极/T₃基极“－”→PNP管T₃集电极输出“＋”→T₂基极反馈“＋”。T₂基极升高会减小T₁、T₂的差模输入，形成负反馈。x<sub>f</sub>=u<sub>f</sub>为T₂基极对交流地电压。</li><li><strong>组态：</strong>电压串联负反馈。±12V电源在交流等效中均接地，R<sub>b2</sub>是反馈分压下臂。</li><li><strong>电阻：</strong>输入电阻增大，输出电阻减小。</li><li><strong>深反馈计算：</strong>忽略两输入基极电流造成的电阻压降，T₁基极电压≈u<sub>i</sub>，T₂基极u<sub>f</sub>≈u<sub>o</sub>R<sub>b2</sub>/(R<sub>b2</sub>+R<sub>f</sub>)。差模净输入近似零，因此<strong>A<sub>uf</sub>≈1+R<sub>f</sub>/R<sub>b2</sub></strong>，同相。若基极电流与R<sub>b1</sub>压降不可忽略，应回到小信号模型，不能把该近似当精确恒等式。</li></ol>
+</div></details>
+
+<details class="solution" id="solution-7-8"><summary>7.8 电压并联与电流并联：输出电阻变化相反</summary><div>
+<p><a href="pages/p172.jpg" target="_blank" rel="noopener">原题与图7.8：172页</a></p>
+<h4>图(a)</h4><ol><li><strong>极性和反馈量：</strong>T₁基极“＋”→T₁集电极/T₂基极“－”→T₂射极输出“－”。R₄使从输入节点流向输出的分流电流增加，削弱净基极输入。标i<sub>f</sub>方向为T₁基极→R₄→u<sub>o</sub>，i<sub>f</sub>=(v<sub>b1</sub>−u<sub>o</sub>)/R₄。</li><li><strong>组态：</strong>电压并联负反馈；R₃同时引入T₁局部射极负反馈。</li><li><strong>电阻：</strong>混合节点看入电阻减小，计入串联输入电阻R₁后整体输入电阻约R₁；输出电阻减小。</li><li><strong>深反馈计算：</strong>令净输入很小，v<sub>b1</sub>≈0、基极电流可忽略。输入节点KCL为u<sub>i</sub>/R₁≈−u<sub>o</sub>/R₄，故<strong>A<sub>uf</sub>≈−R₄/R₁</strong>。R₃影响达到深反馈的开环增益和适用范围，不能据此说R₃“没有作用”。</li></ol>
+<h4>图(b)</h4><ol><li><strong>极性和反馈量：</strong>T₁基极“＋”→T₁集电极/T₂基极“－”→T₂集电极u<sub>o</sub>“＋”；T₂发射极则为“－”。这个负增量经R<sub>f</sub>返回T₁基极，使净输入电流减小。标反馈电流i<sub>f</sub>从T₁基极流向T₂发射极，i<sub>f</sub>=(v<sub>b1</sub>−v<sub>e2</sub>)/R<sub>f</sub>。</li><li><strong>组态：</strong>在T₂射极电阻处检测输出级电流，以电流返回输入求和节点，是<strong>电流并联负反馈</strong>，不是电压并联负反馈。</li><li><strong>电阻：</strong>输入电阻减小，输出电阻增大；“电流反馈使输出更接近恒流源”可帮助记忆。</li><li><strong>深反馈计算：</strong>令v<sub>b1</sub>≈0，输入电流i<sub>i</sub>≈i<sub>f</sub>，则v<sub>e2</sub>≈−i<sub>i</sub>R<sub>f</sub>。T₂射极电流增量为i<sub>e2</sub>≈v<sub>e2</sub>/R<sub>e2</sub>+v<sub>e2</sub>/R<sub>f</sub>=−i<sub>i</sub>(1+R<sub>f</sub>/R<sub>e2</sub>)。忽略基极电流，取输出向外提供的电流i<sub>o</sub>≈−i<sub>c2</sub>≈−i<sub>e2</sub>，得到<strong>A<sub>if</sub>=i<sub>o</sub>/i<sub>i</sub>≈1+R<sub>f</sub>/R<sub>e2</sub></strong>。</li></ol>
+<p>若把输出电流改定义为向下流入T₂集电极，增益应带负号；必须先说明参考方向。若还要求有源内阻R<sub>s</sub>时的电压增益，令R′<sub>C2</sub>=R<sub>C2</sub>∥R<sub>L</sub>（空载时R′<sub>C2</sub>=R<sub>C2</sub>），则u<sub>o</sub>/u<sub>s</sub>≈(1+R<sub>f</sub>/R<sub>e2</sub>)R′<sub>C2</sub>/R<sub>s</sub>。这是把电流增益进一步换算为电压增益，不能把二者直接混用。</p>
+</div></details>
+</section>
+
+</main><footer>依据上传教材逐题推导。原题、书后参考答案与本解析分开呈现；涉及近似、题面缺项或疑似勘误时，在对应题中注明。<br><a href="solutions.html">解析目录</a> · <a href="index.html">返回知识串讲</a></footer><dialog id="original-dialog" aria-label="教材原题"><div class="original-tools"><button data-prev type="button">上一页</button><select aria-label="选择教材原题页"><option value="170">教材第170页</option><option value="171">教材第171页</option><option value="172">教材第172页</option></select><button data-next type="button">下一页</button><a class="full-original" href="pages/p170.jpg" target="_blank" rel="noopener">打开高清页 ↗</a><button type="button" class="close">关闭原题</button></div><p class="original-status" aria-live="polite"></p><img class="original-image" alt="教材原题" decoding="async"></dialog><a class="page-top" href="#top">回到顶部 ↑</a></body></html>

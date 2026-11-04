@@ -1,0 +1,168 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第5章习题解析 · 模电学习手册</title><link rel="stylesheet" href="solutions.css"><script defer src="solutions.js"></script></head><body id="top"><header><div class="crumbs"><a href="index.html">知识串讲</a><span>/</span><a href="solutions.html">全书解析</a></div><p class="eyebrow">WORKED SOLUTIONS / CHAPTER 05</p><h1>第5章 · 差分式放大电路</h1><p class="intro">5.1～5.19 · 19道编号习题 · 原题第122～126页<br>先看原题，再展开推导。数值结果请连同本题采用的模型与近似条件阅读。</p><div class="actions"><input type="search" data-search aria-label="查找解析" placeholder="按题号或关键词查找"><button data-expand>展开全部解析</button><button data-collapse>收起解析</button><button data-print>打印解析 / 存为PDF</button><button class="original-trigger" data-original>查看教材原题</button></div><nav class="question-nav" aria-label="本章题号"><a href="#solution-5-1">5.1</a><a href="#solution-5-2">5.2</a><a href="#solution-5-3">5.3</a><a href="#solution-5-4">5.4</a><a href="#solution-5-5">5.5</a><a href="#solution-5-6">5.6</a><a href="#solution-5-7">5.7</a><a href="#solution-5-8">5.8</a><a href="#solution-5-9">5.9</a><a href="#solution-5-10">5.10</a><a href="#solution-5-11">5.11</a><a href="#solution-5-12">5.12</a><a href="#solution-5-13">5.13</a><a href="#solution-5-14">5.14</a><a href="#solution-5-15">5.15</a><a href="#solution-5-16">5.16</a><a href="#solution-5-17">5.17</a><a href="#solution-5-18">5.18</a><a href="#solution-5-19">5.19</a></nav></header><main><p id="nothing" hidden>没有匹配的解析，请换一个题号或关键词。</p><section data-solution-chapter="5">
+<h3>第5章逐题解析：差分式放大电路</h3>
+<p>统一约定：u<sub>id</sub>=u<sub>i1</sub>−u<sub>i2</sub>，u<sub>ic</sub>=(u<sub>i1</sub>+u<sub>i2</sub>)/2；输出电压的正负严格按原图标注。数值计算取U<sub>T</sub>=26mV，忽略晶体管r<sub>ce</sub>，采用教材的小信号模型r<sub>be</sub>=r<sub>bb′</sub>+(β+1)U<sub>T</sub>/I<sub>EQ</sub>。以下“有限β计算”是在恒定U<sub>BE</sub>模型内保留I<sub>C</sub>=βI<sub>E</sub>/(β+1)，不等于真实器件的完全精确模型。题给r<sub>be</sub>时直接使用题给值。</p>
+
+<details class="solution" id="solution-5-1"><summary>5.1 差模、共模与输出表达式的五个判断</summary><div>
+<p><a href="pages/p123.jpg" target="_blank" rel="noopener">原题：教材123页（题号起于122页）</a></p>
+<ol><li><strong>√。</strong>按通常约定信号从第1端输入，第2端接地，u<sub>id</sub>=u<sub>i1</sub>−0=u<sub>i1</sub>。注意这是“两端之差”，不是每一支路分到的差模分量。</li>
+<li><strong>√。</strong>双端输入时，差模输入的定义就是u<sub>id</sub>=u<sub>i1</sub>−u<sub>i2</sub>。</li>
+<li><strong>×。</strong>单端输入u<sub>i1</sub>=u<sub>i</sub>、u<sub>i2</sub>=0时，u<sub>ic</sub>=(u<sub>i</sub>+0)/2=u<sub>i</sub>/2，不等于u<sub>i</sub>。</li>
+<li><strong>√。</strong>共模输入定义为两输入的平均值：(u<sub>i1</sub>+u<sub>i2</sub>)/2。</li>
+<li><strong>×。</strong>一般应写u<sub>o</sub>=A<sub>ud</sub>u<sub>id</sub>+A<sub>uc</sub>u<sub>ic</sub>。只有共模输入为零，或该输出方式下A<sub>uc</sub>=0时，才简化为A<sub>ud</sub>u<sub>id</sub>。</li></ol>
+<p class="warn-tip">书后5.1第(3)项标为“√”，与共模输入的定义不符，应改为“×”。最终顺序：√、√、×、√、×。</p>
+</div></details>
+
+<details class="solution" id="solution-5-2"><summary>5.2 两个输入为5V、3V时的共模输入</summary><div>
+<p><a href="pages/p123.jpg" target="_blank" rel="noopener">原题：教材123页</a></p>
+<div class="formula">u<sub>ic</sub>=(u<sub>i1</sub>+u<sub>i2</sub>)/2=(5+3)/2=4V。</div>
+<p>因此选<strong>c</strong>。这里是对输入进行代数分解；不能据此直接断定实际放大器在这么大的输入电位下仍处于允许共模范围。顺便检验：u<sub>id</sub>=2V，4V±1V恰好还原两个输入。</p>
+</div></details>
+
+<details class="solution" id="solution-5-3"><summary>5.3 比较单端与双端输出的零点漂移</summary><div>
+<p><a href="pages/p123.jpg" target="_blank" rel="noopener">原题：教材123页</a></p>
+<p>错误项是<strong>a</strong>。同一对匹配管受温度变化时，两侧集电极电位通常同方向变化。双端输出取两侧之差，这部分共同变化能够相消；单端输出只观察一侧，不能依靠输出相减消掉全部共同漂移。因此不能说单端输出比双端输出零漂更小。</p>
+<p>b正确：双端输出主要利用两侧对称性抵消共同漂移。c正确：恒流源使尾电流对温度及公共发射极电位变化较不敏感，即使只从一侧取输出，也能降低共模变化和零漂。</p>
+</div></details>
+
+<details class="solution" id="solution-5-4"><summary>5.4 单端输入、单端输出的信号分解</summary><div>
+<p><a href="pages/p123.jpg" target="_blank" rel="noopener">原题及图5.4：教材123页</a></p>
+<p>图中信号加在T<sub>1</sub>侧，另一输入经同值R<sub>b</sub>接地。先分解输入：</p>
+<div class="formula">u<sub>id</sub>=u<sub>i</sub>，u<sub>ic</sub>=u<sub>i</sub>/2；<br>u<sub>o</sub>=A<sub>ud</sub>u<sub>i</sub>+A<sub>uc</sub>u<sub>i</sub>/2。</div>
+<p>所以正确项是<strong>b</strong>。对图中左侧单端输出，在忽略r<sub>ce</sub>的模型下，纯差模时公共发射极为交流虚地：</p>
+<div class="formula">A<sub>ud</sub>=−β(R<sub>C</sub>∥R<sub>L</sub>)/[2(R<sub>b</sub>+r<sub>be</sub>)]。</div>
+<p>a中的正号不对，纯差模分母也不应直接加公共尾电阻R<sub>e</sub>。这里R<sub>L</sub>接在单个输出与地之间，因此使用R<sub>C</sub>∥R<sub>L</sub>，不是双端跨接负载的R<sub>L</sub>/2。有限尾电阻下，单端共模增益一般不为零，故c的K<sub>CMR</sub>=∞不成立。</p>
+</div></details>
+
+<details class="solution" id="solution-5-5"><summary>5.5 40dB增益与输出电压的符号</summary><div>
+<p><a href="pages/p123.jpg" target="_blank" rel="noopener">原题及图5.5：教材123页</a></p>
+<p>先把分贝换为线性倍数，再由电路确定符号。电压增益用20log<sub>10</sub>|A<sub>ud</sub>|，所以|A<sub>ud</sub>|=10<sup>40/20</sup>=100。</p>
+<p>图中u<sub>o</sub>为左集电极电位减右集电极电位；u<sub>i1</sub>增大使左集电极电位下降，所以A<sub>ud</sub>=−100。</p>
+<div class="formula">u<sub>id</sub>=10mV−30mV=−20mV；<br>u<sub>o</sub>=−100×(−20mV)=+2V。</div>
+<p>选<strong>a</strong>。对称双端输出的共模输出为零，不必把平均输入20mV另外乘差模增益。</p>
+</div></details>
+
+<details class="solution" id="solution-5-6"><summary>5.6 已知差模增益，是否足够求单端输出？</summary><div>
+<p><a href="pages/p123.jpg" target="_blank" rel="noopener">题干：123页</a> · <a href="pages/p124.jpg" target="_blank" rel="noopener">图5.6：124页</a></p>
+<div class="formula">u<sub>id</sub>=1500μV−500μV=1000μV=1mV；<br>u<sub>ic</sub>=(1500μV+500μV)/2=1mV；<br>u<sub>o</sub>=100×1mV+A<sub>uc</sub>×1mV=0.1V+A<sub>uc</sub>×0.001V。</div>
+<p>按图中的<strong>有限尾电阻、单端输出</strong>处理，仅两支路理想对称，仍不能保证单端A<sub>uc</sub>=0。题目没有给A<sub>uc</sub>或足以求它的参数，因此严格按这一电路模型选<strong>c：不能确定</strong>，与书后答案一致。</p>
+<p class="warn-tip">“理想”一词容易引起歧义：若另外规定整个放大器完全抑制共模，即A<sub>uc</sub>=0，才得到0.1V并选b。不能仅凭“器件参数对称”就把单端共模项删掉。</p>
+</div></details>
+
+<details class="solution" id="solution-5-7"><summary>5.7 对称双端输出的共模增益</summary><div>
+<p><a href="pages/p123.jpg" target="_blank" rel="noopener">题干：123页</a> · <a href="pages/p124.jpg" target="_blank" rel="noopener">选项：124页</a></p>
+<p>共模输入使两输入同时升高相同数值。理想对称电路中，两侧集电极的交流变化相同，u<sub>oc1</sub>=u<sub>oc2</sub>，所以双端共模输出u<sub>oc</sub>=u<sub>oc1</sub>−u<sub>oc2</sub>=0。</p>
+<div class="formula">A<sub>uc</sub>=u<sub>oc</sub>/u<sub>ic</sub>=0。</div><p>选<strong>a</strong>。为零的是两个输出之差，不能据此说每一个集电极电位都完全不变。</p>
+</div></details>
+
+<details class="solution" id="solution-5-8"><summary>5.8 双端输入改成单端输入，差模增益是否减半？</summary><div>
+<p><a href="pages/p124.jpg" target="_blank" rel="noopener">原题：教材124页</a></p>
+<p>选<strong>c：不变</strong>。差模增益始终定义为u<sub>od</sub>/u<sub>id</sub>，与信号由一个输入端还是两个输入端提供无关。单端输入u<sub>i</sub>、0，也能分解为+u<sub>i</sub>/2、−u<sub>i</sub>/2的差模部分，再叠加u<sub>i</sub>/2的共模部分。</p>
+<p>改变输入方式会改变“给定某个源电压时，u<sub>id</sub>是多少”，但不会把按u<sub>id</sub>定义的电路增益本身变成一半。比较前后增益时，应保持输出取法与负载条件一致。</p>
+</div></details>
+
+<details class="solution" id="solution-5-9"><summary>5.9 单端输出的共模抑制比为何降低？</summary><div>
+<p><a href="pages/p124.jpg" target="_blank" rel="noopener">原题：教材124页</a></p>
+<p>在相同电路及相应可比负载条件下，双端差模输出把两侧反相变化相减，幅值约为单端的两倍；改成单端后|A<sub>ud</sub>|减小。双端输出能将两侧相同的共模变化抵消，单端输出则留下有限共模变化，因此|A<sub>uc</sub>|增大。</p>
+<div class="formula">K<sub>CMR</sub>=|A<sub>ud</sub>/A<sub>uc</sub>|：分子减小、分母增大，故减小。</div><p>选<strong>c</strong>。</p>
+</div></details>
+
+<details class="solution" id="solution-5-10"><summary>5.10 长尾电阻的主要作用</summary><div>
+<p><a href="pages/p124.jpg" target="_blank" rel="noopener">原题：教材124页</a></p>
+<p>选<strong>b：抑制零漂</strong>。当温度或共模输入使两管电流同时增大时，尾电阻上的电压升高，公共发射极电位随之升高，抵消原来的U<sub>BE</sub>增大量，形成负反馈。</p>
+<p>纯差模时，一侧电流增加、另一侧减少，理想对称条件下尾电阻中的交流电流增量相加为零。它不会像两只独立的未旁路射极电阻那样直接进入差模增益和差模输入电阻公式，故a、c不是其主要作用。</p>
+</div></details>
+
+<details class="solution" id="solution-5-11"><summary>5.11 为什么用恒流源代替尾电阻？</summary><div>
+<p><a href="pages/p124.jpg" target="_blank" rel="noopener">原题：教材124页</a></p>
+<p>恒流源可在不需要很大直流压降的同时提供很大的交流输出电阻。当两输入发生相同变化时，尾电流更接近不变，因此共模增益的绝对值降低；差模增益主要由各支路的晶体管与负载决定。</p>
+<div class="formula">|A<sub>uc</sub>|下降 ⇒ K<sub>CMR</sub>=|A<sub>ud</sub>/A<sub>uc</sub>|提高。</div>
+<p>应选<strong>c：提高共模抑制比</strong>。</p><p class="warn-tip">书后答案标为b“提高共模电压放大倍数”，与恒流源抑制共模的作用相反，应更正为c。</p>
+</div></details>
+
+<details class="solution" id="solution-5-12"><summary>5.12 差模、共模共同决定输出</summary><div>
+<p><a href="pages/p124.jpg" target="_blank" rel="noopener">原题：教材124页</a></p>
+<p><strong>(1) 输入分解。</strong></p><div class="formula">u<sub>id</sub>=1.01−0.99=0.02V；<br>u<sub>ic</sub>=(1.01+0.99)/2=1V。</div>
+<p><strong>(2) 输出及共模抑制比。</strong>差模输出为−50×0.02=−1V；共模输出为−0.05×1=−0.05V，两部分代数相加。</p>
+<div class="formula">u<sub>o</sub>=−1−0.05=−1.05V；<br>K<sub>CMR</sub>=|−50/(−0.05)|=1000；<br>K<sub>CMR,dB</sub>=20log<sub>10</sub>1000=60dB。</div>
+<p>即使共模增益很小，输入中的共模电压很大时，它仍可形成不可忽略的输出误差。</p>
+</div></details>
+
+<details class="solution" id="solution-5-13"><summary>5.13 对称双端输出与负增益的代入</summary><div>
+<p><a href="pages/p124.jpg" target="_blank" rel="noopener">原题：教材124页</a></p>
+<p><strong>(1)</strong>当u<sub>i1</sub>=u<sub>i2</sub>时，u<sub>id</sub>=0；两边完全对称，双端共模输出相减为零，因此<strong>u<sub>o</sub>=0</strong>。</p>
+<p><strong>(2)</strong>对题给1.5mV、0.5mV：</p><div class="formula">u<sub>id</sub>=1.5−0.5=1mV；<br>u<sub>ic</sub>=(1.5+0.5)/2=1mV；<br>u<sub>o</sub>=A<sub>ud</sub>u<sub>id</sub>=−100×1mV=−100mV。</div>
+<p class="warn-tip">题面明确给A<sub>ud</sub>=−100，因此有符号输出是−100mV。书后写100mV只能视为幅值；若作为按原方向的代数输出，则漏了负号。</p>
+</div></details>
+
+<details class="solution" id="solution-5-14"><summary>5.14 双端跨接负载：静态Q点与R<sub>L</sub>/2折算</summary><div>
+<p><a href="pages/p124.jpg" target="_blank" rel="noopener">原题及图5.14：教材124页</a></p>
+<p><strong>(1) 静态工作点。</strong>令两输入直流电位均为0，题给U<sub>BE</sub>=0.6V，则公共发射极电位V<sub>E</sub>=−0.6V。尾电阻两端电压为−0.6−(−12)=11.4V：</p>
+<div class="formula">I<sub>tail</sub>=11.4V/20kΩ=0.57mA；<br>I<sub>E1Q</sub>=I<sub>E2Q</sub>=0.285mA；<br>I<sub>BQ</sub>=0.285/81=0.003519mA=3.519μA；<br>I<sub>CQ</sub>=80I<sub>BQ</sub>=0.2815mA；<br>V<sub>CQ</sub>=12−0.2815mA×10kΩ=9.185V；<br>U<sub>CEQ</sub>=V<sub>CQ</sub>−V<sub>EQ</sub>=9.785V。</div>
+<p>两集电极的直流电位相同，跨接的20kΩ负载没有直流电流。且V<sub>C</sub>&gt;V<sub>B</sub>=0、发射结正偏，放大区假设成立。工程近似可写I<sub>CQ</sub>≈0.28mA、V<sub>CQ</sub>≈9.2V。</p>
+<p><strong>(2) 差模增益。</strong>差模时两输出大小相等、方向相反；跨两集电极的R<sub>L</sub>=20kΩ，在每个半电路中等效为R<sub>L</sub>/2=10kΩ。</p>
+<div class="formula">R′<sub>C</sub>=10kΩ∥10kΩ=5kΩ；<br>A<sub>ud</sub>=−βR′<sub>C</sub>/r<sub>be</sub>=−80×5/7.6≈−52.63。</div>
+<p class="warn-tip">书后“ I<sub>B</sub>=0.28mA ”应为 I<sub>C</sub>≈0.28mA；基极电流应为约3.5μA，不能将二者混淆。</p>
+</div></details>
+
+<details class="solution" id="solution-5-15"><summary>5.15 调零电位器：差模时不能删掉两段50Ω</summary><div>
+<p><a href="pages/p125.jpg" target="_blank" rel="noopener">原题及图5.15：教材125页</a></p>
+<p>R<sub>W</sub>=100Ω、滑动端在中点，所以每个发射极到中点各有50Ω；公共尾电阻为5.1kΩ。题给β=100、r<sub>bb′</sub>=100Ω、U<sub>BEQ</sub>=0.7V。</p>
+<p><strong>(1) 每管静态发射极电流。</strong>静态输入置零，两基极电位为0、两发射极均为−0.7V。每个50Ω流过I<sub>EQ</sub>，尾电阻流过2I<sub>EQ</sub>，故</p>
+<div class="formula">6−0.7=I<sub>EQ</sub>×50Ω+2I<sub>EQ</sub>×5.1kΩ；<br>I<sub>EQ</sub>=5.3/10250=0.5171mA。</div>
+<p><strong>(2) 小信号参数与四项指标。</strong></p>
+<div class="formula">r<sub>be</sub>=100Ω+101×26mV/0.5171mA≈5.179kΩ；<br>D=r<sub>be</sub>+(β+1)R<sub>W</sub>/2≈5.179kΩ+5.050kΩ=10.229kΩ。</div>
+<p>纯差模时中点为交流虚地，5.1kΩ尾电阻中没有差模电流，但每边50Ω仍有电流，必须保留。负载跨双端，每边看到R<sub>L</sub>/2=5kΩ：</p>
+<div class="formula">A<sub>ud</sub>=−β(R<sub>C</sub>∥R<sub>L</sub>/2)/D<br>=−100×(10kΩ∥5kΩ)/10.229kΩ≈−32.59；<br>A<sub>uc</sub>=0（对称双端输出）；<br>R<sub>id</sub>=2D≈20.46kΩ；<br>R<sub>o</sub>=2R<sub>C</sub>=20kΩ（求输出电阻时取下R<sub>L</sub>）。</div>
+<p>书后给−32.4、20.5kΩ，属于中间量取整后的近似结果。把100Ω调零电位器整体短路，会严重高估差模增益。</p>
+</div></details>
+
+<details class="solution" id="solution-5-16"><summary>5.16 单端负载直接接地：直流也要计算R<sub>L</sub></summary><div>
+<p><a href="pages/p125.jpg" target="_blank" rel="noopener">原题及图5.16：教材125页</a></p>
+<p>已知R<sub>C</sub>=20kΩ、R<sub>L</sub>=12kΩ、R<sub>E</sub>=10kΩ、β=50、r<sub>bb′</sub>=200Ω、U<sub>BEQ</sub>=0.6V，供电+12V、−6V。R<sub>L</sub>和集电极之间没有隔直电容，所以它参与直流分析。</p>
+<p><strong>(1) 静态I<sub>CQ1</sub>、V<sub>CQ1</sub>。</strong>V<sub>E</sub>=−0.6V，尾电流为(6−0.6)/10kΩ=0.54mA，每管I<sub>EQ</sub>=0.27mA：</p>
+<div class="formula">I<sub>CQ1</sub>=(50/51)×0.27≈0.2647mA；<br>(12−V<sub>C1</sub>)/20kΩ=I<sub>CQ1</sub>+V<sub>C1</sub>/12kΩ；<br>V<sub>CQ1</sub>=[12/20kΩ−0.2647mA]×(20kΩ∥12kΩ)≈2.515V。</div>
+<p>U<sub>CEQ1</sub>=2.515−(−0.6)=3.115V，仍在放大区。取I<sub>CQ</sub>≈I<sub>EQ</sub>=0.27mA时得到V<sub>CQ1</sub>≈2.475V，与书后2.5V一致；若漏掉R<sub>L</sub>会算出约6.6V，明显不是这张图的直流结果。</p>
+<p><strong>(2) 差模增益。</strong>单端负载对地，R′<sub>C</sub>=20kΩ∥12kΩ=7.5kΩ。</p>
+<div class="formula">r<sub>be</sub>=200Ω+51×26mV/0.27mA≈5.111kΩ；<br>A<sub>ud</sub>=−βR′<sub>C</sub>/(2r<sub>be</sub>)≈−36.685。</div>
+<p><strong>(3) 共模增益与共模抑制比。</strong>共模时尾电阻流过两倍单支路电流，因此每个共模半电路的发射极电阻为2R<sub>E</sub>：</p>
+<div class="formula">A<sub>uc</sub>=−βR′<sub>C</sub>/[r<sub>be</sub>+2(β+1)R<sub>E</sub>]<br>=−50×7500/[5111.11+2×51×10000]≈−0.36581；<br>K<sub>CMR</sub>=|A<sub>ud</sub>/A<sub>uc</sub>|≈100.28（约40.02dB）。</div>
+<p>教材常进一步用β/(β+1)≈1，并忽略共模分母中的r<sub>be</sub>，得到A<sub>uc</sub>≈−R′<sub>C</sub>/(2R<sub>E</sub>)=−0.375；配合A<sub>ud</sub>≈−36.8，可得书后K<sub>CMR</sub>≈98.1。两套结果的差异来自近似层级，应说明使用哪一套。</p>
+</div></details>
+
+<details class="solution" id="solution-5-17"><summary>5.17 恒流源差放：空载与带载输出</summary><div>
+<p><a href="pages/p125.jpg" target="_blank" rel="noopener">原题及图5.17：教材125页</a></p>
+<p>尾电流源为1.2mA，两支路静态各分0.6mA。每侧基极串联100Ω，100Ω电位器在中点，每侧发射极串联50Ω；题给β=50、r<sub>bb′</sub>=300Ω。</p>
+<div class="formula">r<sub>be</sub>=300Ω+51×26mV/0.6mA=2510Ω；<br>D=R<sub>b</sub>+r<sub>be</sub>+(β+1)R<sub>W</sub>/2<br>=100+2510+51×50=5160Ω。</div>
+<p>虽然只有左侧输入u<sub>i</sub>=0.02V，但u<sub>id</sub>=u<sub>i</sub>。理想匹配、双端输出时共模项相消，因此直接用差模增益求输出。</p>
+<p><strong>(1) R<sub>L</sub>开路。</strong></p><div class="formula">A<sub>ud0</sub>=−50×4700/5160≈−45.543；<br>u<sub>od0</sub>=−45.543×0.02≈−0.911V。</div>
+<p><strong>(2) 接R<sub>L</sub>=10kΩ。</strong>每半边负载为5kΩ：</p><div class="formula">R′<sub>C</sub>=4.7kΩ∥5kΩ≈2.4227kΩ；<br>A<sub>udL</sub>=−50×2422.7/5160≈−23.476；<br>u<sub>odL</sub>=−23.476×0.02≈−0.470V。</div>
+<p>输出方向按图为左“+”、右“−”，正输入使左集电极下降，因此输出代数值应为负；两种输出幅值分别为0.911V、0.470V。书后若只写0.91、0.47，应理解为幅值。负载使增益下降，并不会把差模输入本身改成0.01V后再少算一次。</p>
+</div></details>
+
+<details class="solution" id="solution-5-18"><summary>5.18 晶体管恒流源：先算尾电流，再算差模增益</summary><div>
+<p><a href="pages/p125.jpg" target="_blank" rel="noopener">题干：125页</a> · <a href="pages/p126.jpg" target="_blank" rel="noopener">图5.18：126页</a></p>
+<p>电源是+12V与−12V，因此R<sub>1</sub>=12kΩ、R<sub>2</sub>=3.9kΩ两端总电压为24V；不能只用12V分压。题给β<sub>1</sub>=β<sub>2</sub>=50、三个U<sub>BE</sub>=0.7V。题面没有给β<sub>3</sub>和r<sub>bb′</sub>，下面先给通用关系，再注明数值估算条件。</p>
+<p><strong>(1) T<sub>1</sub>、T<sub>2</sub>的静态工作点。</strong>从T<sub>3</sub>基极看，分压网络的戴维南电压（相对于−12V）及电阻为：</p>
+<div class="formula">V<sub>BB,rel</sub>=24×3.9/(12+3.9)=5.88679V；<br>R<sub>B3</sub>=12kΩ∥3.9kΩ=2.94340kΩ；<br>I<sub>E3</sub>=(5.88679−0.7)/[5.1kΩ+2.94340kΩ/(β<sub>3</sub>+1)]；<br>I<sub>C3</sub>=β<sub>3</sub>I<sub>E3</sub>/(β<sub>3</sub>+1)；<br>I<sub>E1</sub>=I<sub>E2</sub>=I<sub>C3</sub>/2；<br>I<sub>C1</sub>=I<sub>C2</sub>=(50/51)I<sub>C3</sub>/2；<br>V<sub>C1</sub>=V<sub>C2</sub>=12V−10kΩ·I<sub>C1</sub>。</div>
+<p>按常用工程近似忽略T<sub>3</sub>基极电流并令I<sub>C3</sub>≈I<sub>E3</sub>，尾电流约1.017mA，两管I<sub>CQ</sub>≈0.499mA、V<sub>CQ</sub>≈7.015V，即书后约<strong>0.5mA、7V</strong>。若另取β<sub>3</sub>=50并保留基极分流，得到I<sub>C3</sub>=0.98592mA，两管I<sub>CQ</sub>=0.48329mA、V<sub>CQ</sub>=7.1671V。</p>
+<p><strong>(2) 跨两输出接10kΩ时的增益大小。</strong>负载每边折为5kΩ，与10kΩ集电极电阻并联得到3.3333kΩ；双端输出为左减右：</p>
+<div class="formula">r<sub>be</sub>=r<sub>bb′</sub>+51×26mV/(I<sub>C3</sub>/2)；<br>A<sub>ud</sub>=−50×3.3333kΩ/r<sub>be</sub>。</div>
+<p>补充采用r<sub>bb′</sub>=300Ω、β<sub>3</sub>=50时，r<sub>be</sub>≈2.9899kΩ，A<sub>ud</sub>≈−55.74，题目所问增益<strong>大小约55.7</strong>。若忽略T<sub>3</sub>基极电流并令I<sub>C3</sub>≈I<sub>E3</sub>，在同样r<sub>bb′</sub>=300Ω下，则r<sub>be</sub>≈2.9076kΩ，|A<sub>ud</sub>|≈57.32。</p>
+<p class="warn-tip">书后同时列r<sub>be</sub>≈2.9kΩ、A<sub>ud</sub>=55.6，二者不能在同一公式下严格对应：直接以2.9kΩ代入应得约57.5。55.6更接近保留β<sub>3</sub>=50的分压加载结果。题目未给β<sub>3</sub>、r<sub>bb′</sub>，数值估算应写清补充假设，不能把某组近似称为唯一精确答案。</p>
+</div></details>
+
+<details class="solution" id="solution-5-19"><summary>5.19 稳压管偏置恒流源的元件选择与输入电压</summary><div>
+<p><a href="pages/p125.jpg" target="_blank" rel="noopener">题干前半：125页</a> · <a href="pages/p126.jpg" target="_blank" rel="noopener">第(3)问及图5.19：126页</a></p>
+<p>题给各管β=50、r<sub>bb′</sub>=300Ω、U<sub>BE</sub>=0.7V，U<sub>Z</sub>=6.7V、I<sub>Z</sub>=5mA，要求T<sub>1</sub>、T<sub>2</sub>各有I<sub>CQ</sub>=1mA。图中稳压管下端接−12V，故T<sub>3</sub>基极电位V<sub>B3</sub>=−12+6.7=−5.3V，发射极电位V<sub>E3</sub>=−6V。</p>
+<p><strong>(1) T<sub>3</sub>发射极电阻R<sub>e</sub>。</strong>尾电流为上面两只管子的发射极电流之和：</p>
+<div class="formula">I<sub>E1</sub>=I<sub>E2</sub>=(51/50)×1mA=1.02mA；<br>I<sub>C3</sub>=2.04mA；I<sub>E3</sub>=(51/50)×2.04mA=2.0808mA；<br>R<sub>e</sub>=[−6−(−12)]/2.0808mA≈2.884kΩ。</div>
+<p>若按工程近似把各管I<sub>E</sub>≈I<sub>C</sub>，则I<sub>E3</sub>≈2mA，得到书后的<strong>R<sub>e</sub>≈3kΩ</strong>。精确到有限β模型并要求每个I<sub>CQ</sub>正好1mA时，应采用约2.884kΩ或可调电阻校准。</p>
+<p><strong>(2) 稳压管限流电阻R。</strong>R由地接到−5.3V节点，电流既供稳压管也供T<sub>3</sub>基极：</p>
+<div class="formula">I<sub>B3</sub>=I<sub>C3</sub>/β=2.04mA/50=0.0408mA；<br>I<sub>R</sub>=I<sub>Z</sub>+I<sub>B3</sub>=5.0408mA；<br>R=[0−(−5.3)]/5.0408mA≈1.051kΩ。</div>
+<p>忽略基极电流得到1.06kΩ；选用常见的<strong>1kΩ</strong>时，I<sub>Z</sub>约5.26mA，是书后取值的工程意义。若题意要求工作电流严格为5mA，计算值应为约1.051kΩ，而非恰好1kΩ。</p>
+<p><strong>(3) R<sub>L</sub>=15kΩ、u<sub>o</sub>=0.5V时的输入。</strong>每侧R<sub>C</sub>=15kΩ、R<sub>b</sub>=1kΩ。双端负载每侧折为7.5kΩ：</p>
+<div class="formula">r<sub>be</sub>=300Ω+51×26mV/1.02mA=1.600kΩ；<br>R′<sub>C</sub>=15kΩ∥7.5kΩ=5kΩ；<br>A<sub>ud</sub>=−50×5kΩ/(1kΩ+1.6kΩ)=−96.154；<br>u<sub>i1</sub>=u<sub>id</sub>=u<sub>o</sub>/A<sub>ud</sub>=0.5/(−96.154)=−5.20mV。</div>
+<p>输出按图取左“+”、右“−”，因此要求<strong>+0.5V代数输出</strong>时输入应为负。若题目只问正弦幅值，则输入幅值为<strong>5.20mV</strong>。再采用I<sub>EQ</sub>≈I<sub>CQ</sub>=1mA，可得r<sub>be</sub>≈1.626kΩ、输入幅值约5.252mV，即书后的约5.26mV。两种近似的差异很小，但输出方向与幅值的区别应保留。</p>
+</div></details>
+</section>
+</main><footer>依据上传教材逐题推导。原题、书后参考答案与本解析分开呈现；涉及近似、题面缺项或疑似勘误时，在对应题中注明。<br><a href="solutions.html">解析目录</a> · <a href="index.html">返回知识串讲</a></footer><dialog id="original-dialog" aria-label="教材原题"><div class="original-tools"><button data-prev type="button">上一页</button><select aria-label="选择教材原题页"><option value="122">教材第122页</option><option value="123">教材第123页</option><option value="124">教材第124页</option><option value="125">教材第125页</option><option value="126">教材第126页</option></select><button data-next type="button">下一页</button><a class="full-original" href="pages/p122.jpg" target="_blank" rel="noopener">打开高清页 ↗</a><button type="button" class="close">关闭原题</button></div><p class="original-status" aria-live="polite"></p><img class="original-image" alt="教材原题" decoding="async"></dialog><a class="page-top" href="#top">回到顶部 ↑</a></body></html>
