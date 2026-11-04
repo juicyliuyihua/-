@@ -21,7 +21,7 @@
 
 知识串讲补充：直流与交流负载线、带源内阻增益、未旁路射极电阻、共集/共基分析、复合管、MOS工作区筛根、BJT高频响应、多级带宽、差分负载折算、集成比较器、反馈量纲、任意幅度功放功率、二阶滤波、RC移相、晶体振荡、全波与倍压整流、稳压指标等。
 
-现已补齐全书146道编号习题的逐题解析及47幅电路、波形和曲线图，涵盖判断依据、列式、计算与结论。题面缺项、近似条件及与书后答案的差异在对应题中注明。公式须结合所示电路、单位和近似条件使用。
+现已补齐全书146道编号习题的逐题解析及78幅电路、波形和曲线图，涵盖判断依据、列式、计算与结论。题面缺项、近似条件及与书后答案的差异在对应题中注明。公式须结合所示电路、单位和近似条件使用。
 
 [打开全部习题解析](https://analog-electronics-liu-study.dotingfrost2.chatgpt.site/solutions.html) · [第二章解析](https://analog-electronics-liu-study.dotingfrost2.chatgpt.site/solutions-2.html)
 
@@ -29,4 +29,4 @@
 
 ## 使用
 
-保持本目录的全部文件及`pages/`相对位置不变，可直接用浏览器打开`index.html`，也可部署到静态站点。`solutions.html`为解析目录，`solutions-1.html`至`solutions-10.html`为分章解析，`solutions-all.html`为合订阅读及打印版。支持题号跳转、关键词搜索、逐题展开、原题查看和打印。`solution-audit.json`记录解析覆盖范围。
+保持本目录的全部文件及`pages/`相对位置不变，可直接用浏览器打开`index.html`，也可部署到静态站点。`solutions.html`为解析目录，`solutions-1.html`至`solutions-10.html`为分章解析，`solutions-all.html`为合订阅读及打印版。支持题号跳转、关键词搜索、逐题展开、原题查看和打印。每题可在解析内展开教材原页，并点击放大；新增的31幅针对习题的解析图直接配在推导前。打印保留解析图，不重复打印原题整页。`solution-audit.json`记录解析覆盖范围。
